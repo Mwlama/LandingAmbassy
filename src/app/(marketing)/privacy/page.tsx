@@ -9,10 +9,10 @@ const Privacy = () => {
                     Privacy Policy
                 </h1>
                 <p className="text-sm mb-2 italic mt-20">
-                    Last updated: 17th June 2024
+                    Last updated: February 10, 2025
                 </p>
                 <p className="mt-4">
-                    At <strong>Linkify</strong>, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services.
+                    At <strong>Ambassy.io</strong>, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services.
                 </p>
 
                 <h2 className="text-xl font-medium mt-8">
@@ -23,21 +23,21 @@ const Privacy = () => {
                     Personal Information
                 </h3>
                 <p className="mt-8 text-muted-foreground">
-                    When you register for an account or use our services, we may collect personal information that can identify you, such as your name, email address, and payment information.
+                    When you register for an account or use our services, we may collect personal information that can identify you, such as your name, email address, telephone number, and payment information. This information is gathered when you send feedback, register for services, or make purchases via the website.
                 </p>
 
                 <h3 className="text-lg font-medium mt-12">
                     Non-Personal Information
                 </h3>
                 <p className="mt-8 text-muted-foreground">
-                    We may also collect non-personal information about your use of the service, such as IP addresses, browser types, referring URLs, and other technical data.
+                    We may also collect non-personal information about your use of the service, such as IP addresses, browser types, referring URLs, and the length of your visit to the website. This data is used to improve the performance of our website.
                 </p>
 
                 <h3 className="text-lg font-medium mt-8">
                     Cookies and Tracking Technologies
                 </h3>
                 <p className="mt-8">
-                    We use cookies and similar tracking technologies to collect and store information about your interactions with our website. You can manage your cookie preferences through your browser settings.
+                    We use cookies and similar tracking technologies to collect and store information about your interactions with our website. Cookies are small bits of data cached in your browser, and we use them to determine whether you have visited our home page in the past. You can manage your cookie preferences through your browser settings.
                 </p>
 
                 <h2 className="text-xl font-medium mt-12">
@@ -50,9 +50,9 @@ const Privacy = () => {
                 <div className="mt-8">
                     We use the information we collect to:
                     <ul className="list-disc ml-8 text-muted-foreground">
-                        <li>Provide, operate, and maintain our services.</li>
-                        <li>Improve and personalize your experience.</li>
-                        <li>Process transactions and manage your account.</li>
+                        <li>Process orders and keep you informed about your order status.</li>
+                        <li>Improve and personalize your experience on our website.</li>
+                        <li>Notify you of products or special offers that may be of interest to you.</li>
                     </ul>
                 </div>
 
@@ -86,14 +86,14 @@ const Privacy = () => {
                     Service Providers
                 </h3>
                 <p className="mt-8 text-muted-foreground">
-                    We may share your information with third-party service providers who assist us in operating our services, such as payment processors, email services, and hosting providers.
+                    We may share your information with third-party service providers who assist us in operating our services, such as delivery services for order tracking, payment processors, and hosting providers.
                 </p>
 
                 <h3 className="text-lg mt-8">
                     Legal Requirements
                 </h3>
                 <p className="mt-8 text-muted-foreground">
-                    We may disclose your information if required to do so by law or in response to valid requests by public authorities.
+                    We may disclose your information in response to a subpoena, court order, or other legal request. We may also provide such information to law enforcement agencies as required by law.
                 </p>
 
                 <h3 className="text-lg mt-8">
@@ -125,7 +125,7 @@ const Privacy = () => {
                     Access and Update
                 </h3>
                 <p className="mt-8 text-muted-foreground">
-                    You have the right to access and update your personal information. You can do this by logging into your account and updating your profile settings.
+                    You have the right to access and update your personal information. If you wish to modify or update any information we have received, please contact us at <strong>info@ambassy.io</strong>.
                 </p>
 
                 <h3 className="text-lg mt-8">
@@ -139,14 +139,14 @@ const Privacy = () => {
                     Data Deletion
                 </h3>
                 <p className="mt-8 text-muted-foreground">
-                    You have the right to request the deletion of your personal information. Please contact us at support@linkify.com to make this request.
+                    You have the right to request the deletion of your personal information. Please contact us at <strong>info@ambassy.io</strong> to make this request.
                 </p>
 
                 <h2 className="text-xl font-medium mt-12">
                     Children&apos;s Privacy
                 </h2>
                 <p className="mt-8 text-muted-foreground">
-                    Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children under 18. If we become aware that we have collected personal information from a child under 18, we will take steps to delete such information.
+                    Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from minors under 18. If we become aware that we have collected personal information from a child under 18, we will take steps to delete such information.
                 </p>
 
                 <h2 className="text-xl font-medium mt-12">
@@ -167,11 +167,11 @@ const Privacy = () => {
                     Contact Us
                 </h2>
                 <p className="mt-8 text-muted-foreground">
-                    If you have any questions or concerns about this Privacy Policy, please contact us at support@linkify.io.
+                    If you have any questions or concerns about this Privacy Policy, please contact us at <strong>info@ambassy.io</strong>.
                 </p>
 
                 <p className="mt-8 font-medium">
-                    By using Linkify, you acknowledge that you have read, understood, and agree to the terms of this Privacy Policy.
+                    By using Ambassy.io, you acknowledge that you have read, understood, and agree to the terms of this Privacy Policy.
                 </p>
             </AnimationContainer>
         </MaxWidthWrapper>

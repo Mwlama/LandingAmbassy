@@ -13,8 +13,8 @@ import { Label } from "./label";
 export const CARDS = [
     {
         Icon: Link2Icon,
-        name: "Shorten links",
-        description: "Create short links that are easy to remember and share.",
+        name: "Get your link and procedure  ",
+        description: "Start sharing, track the sales and get your Money.",
         href: "#",
         cta: "Learn more",
         className: "col-span-3 lg:col-span-1",
@@ -22,15 +22,15 @@ export const CARDS = [
             <Card className="absolute top-10 left-10 origin-top rounded-none rounded-tl-md transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_0%,#000_100%)] group-hover:scale-105 border border-border border-r-0">
                 <CardHeader>
                     <CardTitle>
-                        Create short links
+                        Generate Affilate links
                     </CardTitle>
                     <CardDescription>
-                        Create short links that are easy to remember and share.
+                        Send the procedure and affiliate links to the Ambassador
                     </CardDescription>
                 </CardHeader>
                 <CardContent className="-mt-4">
                     <Label>
-                        Paste your link
+                        Paste your procedure
                     </Label>
                     <Input
                         type="text"
@@ -43,8 +43,8 @@ export const CARDS = [
     },
     {
         Icon: SearchIcon,
-        name: "Search your links",
-        description: "Quickly find the links you need with AI-powered search.",
+        name: "Manage your Army of Ambassadors",
+        description: "Quickly find, share and discuss with your Army of Ambassadors.",
         href: "#",
         cta: "Learn more",
         className: "col-span-3 lg:col-span-2",
@@ -52,20 +52,20 @@ export const CARDS = [
             <Command className="absolute right-10 top-10 w-[70%] origin-to translate-x-0 border border-border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:-translate-x-10 p-2">
                 <Input placeholder="Type to search..." />
                 <div className="mt-1 cursor-pointer">
-                    <div className="px-4 py-2 hover:bg-muted rounded-md">linkify.io/hdf00c</div>
-                    <div className="px-4 py-2 hover:bg-muted rounded-md">linkify.io/sdv0n0</div>
-                    <div className="px-4 py-2 hover:bg-muted rounded-md">linkify.io/03gndo</div>
-                    <div className="px-4 py-2 hover:bg-muted rounded-md">linkify.io/09vmmw</div>
-                    <div className="px-4 py-2 hover:bg-muted rounded-md">linkify.io/s09vws</div>
-                    <div className="px-4 py-2 hover:bg-muted rounded-md">linkify.io/sd8fv5</div>
+                    <div className="px-4 py-2 hover:bg-muted rounded-md">Nasdas.shopify/hdf00c</div>
+                    <div className="px-4 py-2 hover:bg-muted rounded-md">MrBeast.shopify/sdv0n0</div>
+                    <div className="px-4 py-2 hover:bg-muted rounded-md">candace.shopify/03gndo</div>
+                    <div className="px-4 py-2 hover:bg-muted rounded-md">Poupette.shopify/09vmmw</div>
+                    <div className="px-4 py-2 hover:bg-muted rounded-md">dylan.shopify/s09vws</div>
+                    <div className="px-4 py-2 hover:bg-muted rounded-md">julien.shopify/sd8fv5</div>
                 </div>
             </Command>
         ),
     },
     {
         Icon: WaypointsIcon,
-        name: "Connect your apps",
-        description: "Integrate with your favorite apps and services.",
+        name: "Connect your apps and share",
+        description: "Integrate with your favorite apps, niche and location.",
         href: "#",
         cta: "Learn more",
         className: "col-span-3 lg:col-span-2 max-w-full overflow-hidden",
@@ -75,8 +75,8 @@ export const CARDS = [
     },
     {
         Icon: CalendarIcon,
-        name: "Calendar",
-        description: "Keep track of your links with our calendar view.",
+        name: "Schedule campaigns",
+        description: "Track your campaigns in your Dashboard.",
         className: "col-span-3 lg:col-span-1",
         href: "#",
         cta: "Learn more",

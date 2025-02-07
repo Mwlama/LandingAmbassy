@@ -1,8 +1,12 @@
 "use client";
 
-import { getAuthStatus } from "@/actions";
 import { useQuery } from "@tanstack/react-query";
 import { useRouter } from 'next/navigation';
+
+const getAuthStatus = async () => {
+    // Replace this with your actual API call
+    return { success: true };
+};
 
 const AuthCallbackPage = () => {
 

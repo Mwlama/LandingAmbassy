@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const generateMetadata = ({
-    title = `${process.env.NEXT_PUBLIC_APP_NAME} - The Link Management Platform for Businesses`,
-    description = `${process.env.NEXT_PUBLIC_APP_NAME} is the link management platform for businesses. It helps you build, brand, and track your links.`,
+    title = `${process.env.NEXT_PUBLIC_APP_NAME} - The Communication Management Platform for Businesses`,
+    description = `${process.env.NEXT_PUBLIC_APP_NAME} is the Ambassy platform for businesses. It helps you build, brand, and track your Ambassadors.`,
     image = "/thumbnail.png",
     icons = [
         {
@@ -13,12 +13,12 @@ export const generateMetadata = ({
         {
             rel: "icon",
             sizes: "32x32",
-            url: "/favicon-32x32.png"
+            url: "/Ambassylogo.png"
         },
         {
             rel: "icon",
             sizes: "16x16",
-            url: "/favicon-16x16.png"
+            url: "/Ambassylogo.png"
         },
     ],
     noIndex = false
@@ -41,7 +41,7 @@ export const generateMetadata = ({
         title,
         description,
         ...(image && { card: "summary_large_image", images: [image] }),
-        creator: "@shreyassihasane",
+        creator: "@Ambassy",
     },
     // metadataBase: new URL(process.env.APP_DOMAIN!),
     ...(noIndex && { robots: { index: false, follow: false } }),

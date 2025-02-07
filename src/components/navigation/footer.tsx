@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { AnimationContainer, Icons } from "@/components"
 import { TextHoverEffect } from "@/components/ui/text-hover-effect"
 
@@ -12,15 +13,12 @@ const Footer = () => {
 
                 <AnimationContainer delay={0.1}>
                     <div className="flex flex-col items-start justify-start md:max-w-[200px]">
-                        <div className="flex items-start">
-                            <Icons.logo className="w-7 h-7" />
-                        </div>
+                    <div className="flex items-start">
+                        <Image src="/icons/Ambassylogo.png" alt="Ambassy Logo"  width={27} height={27}  />
+                    </div>
                         <p className="text-muted-foreground mt-4 text-sm text-start">
-                            Manage your links with ease.
+                            Connecting brands with the perfect influencers to grow their reach and impact.
                         </p>
-                        <span className="mt-4 text-neutral-200 text-sm flex items-center">
-                            Made by <Link href="https://shreyas-sihasane.vercel.app/" className="font-semibold ml-1">Shreyas</Link>
-                        </span>
                     </div>
                 </AnimationContainer>
 
@@ -137,13 +135,13 @@ const Footer = () => {
             <div className="mt-8 border-t border-border/40 pt-4 md:pt-8 md:flex md:items-center md:justify-between w-full">
                 <AnimationContainer delay={0.6}>
                     <p className="text-sm text-muted-foreground mt-8 md:mt-0">
-                        &copy; {new Date().getFullYear()} Linkify INC. All rights reserved.
+                        &copy; {new Date().getFullYear()} AMBASSY INC. All rights reserved.
                     </p>
                 </AnimationContainer>
             </div>
 
-            <div className="h-[20rem] lg:h-[20rem] hidden md:flex items-center justify-center">
-                <TextHoverEffect text="LINKIFY" />
+            <div className="h-[10rem] lg:h-[10rem] hidden md:flex items-center justify-center">
+                <TextHoverEffect text="Ambassy" />
             </div>
         </footer>
     )

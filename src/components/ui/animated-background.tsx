@@ -2,7 +2,7 @@
 
 import { cn } from "@/utils";
 import { motion } from "framer-motion";
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState, useCallback } from "react";
 
 interface Props {
     width?: number;
@@ -31,47 +31,45 @@ export function AnimatedBackground({
     ...props
 }: Props) {
     const id = useId();
-    const containerRef = useRef(null);
+    const containerRef = useRef<SVGSVGElement | null>(null);
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-    const [squares, setSquares] = useState(() => generateSquares(numSquares));
+    const [squares, setSquares] = useState<{ id: number; pos: [number, number] }[]>([]);
 
-    function getPos() {
+    const getPos = useCallback(() => {
         return [
             Math.floor((Math.random() * dimensions.width) / width),
             Math.floor((Math.random() * dimensions.height) / height),
         ];
-    }
+    }, [dimensions.width, dimensions.height, width, height]);
 
-    // Adjust the generateSquares function to return objects with an id, x, and y
-    function generateSquares(count: number) {
+    const generateSquares = useCallback((count: number) => {
         return Array.from({ length: count }, (_, i) => ({
             id: i,
-            pos: getPos(),
+            pos: getPos() as [number, number],
         }));
-    }
+    }, [getPos]);
 
-    // Function to update a single square's position
-    const updateSquarePosition = (id: number) => {
-        setSquares((currentSquares) =>
-            currentSquares.map((sq) =>
-                sq.id === id
-                    ? {
-                        ...sq,
-                        pos: getPos(),
-                    }
-                    : sq,
-            ),
-        );
-    };
+    const updateSquarePosition = useCallback((id: number) => {
+  setSquares((currentSquares) =>
+    currentSquares.map((sq) =>
+      sq.id === id
+        ? {
+            ...sq,
+            pos: getPos() as [number, number],
+          }
+        : sq
+    )
+  );
+}, [getPos]);
 
-    // Update squares to animate in
+      
+
     useEffect(() => {
         if (dimensions.width && dimensions.height) {
             setSquares(generateSquares(numSquares));
         }
-    }, [dimensions, numSquares]);
+    }, [dimensions, numSquares, generateSquares]);
 
-    // Resize observer to update container dimensions
     useEffect(() => {
         const resizeObserver = new ResizeObserver((entries) => {
             for (let entry of entries) {
@@ -82,24 +80,25 @@ export function AnimatedBackground({
             }
         });
 
-        if (containerRef.current) {
-            resizeObserver.observe(containerRef.current);
+        const currentRef = containerRef.current;
+        if (currentRef) {
+            resizeObserver.observe(currentRef);
         }
 
         return () => {
-            if (containerRef.current) {
-                resizeObserver.unobserve(containerRef.current);
+            if (currentRef) {
+                resizeObserver.unobserve(currentRef);
             }
         };
-    }, [containerRef]);
+    }, []);
 
     return (
         <svg
             ref={containerRef}
             aria-hidden="true"
             className={cn(
-                "pointer-events-none absolute inset-0 h-full w-full fill-[rgba(0,0,0,0.01)] stroke-muted-foreground/20",
-                className,
+                "pointer-events-none absolute inset-0 h-full w-full fill-[rgba(0, 0, 0, 0)] stroke-muted-foreground/20",
+                className
             )}
             {...props}
         >
@@ -127,7 +126,7 @@ export function AnimatedBackground({
                         animate={{ opacity: maxOpacity }}
                         transition={{
                             duration,
-                            repeat: 1,
+                            repeat: Infinity,
                             delay: index * 0.1,
                             repeatType: "reverse",
                         }}
@@ -139,7 +138,6 @@ export function AnimatedBackground({
                         y={y * height + 1}
                         fill="currentColor"
                         strokeWidth="0"
-                    // opacity={0.5}
                     />
                 ))}
             </svg>

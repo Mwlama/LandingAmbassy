@@ -9,161 +9,114 @@ const TermsPage = () => {
                     Terms and Conditions
                 </h1>
                 <p className="text-sm mb-2 italic mt-20">
-                    Last updated: 17th June 2024
+                    Last updated: 3rd February 2025
                 </p>
                 <p className="mt-4">
-                    Welcome to Linkify. These terms and conditions outline the rules and regulations for the use of Linkify&apos;s website and services.
+                    Welcome to Ambassy.io. These terms and conditions outline the rules and regulations for the use of Ambassy FZ LLC&aposs (&aposAmbassy.io&apos) website and services.
                 </p>
 
                 <h2 className="text-xl font-medium mt-8">
-                    Acceptance of Terms
+                    1. Acceptance of Terms
                 </h2>
-
                 <p className="mt-8 text-muted-foreground">
-                    By accessing and using Linkify, you accept and agree to be bound by these terms and conditions. If you do not agree to these terms, you may not use our website or services.
+                    By accessing or using https://ambassy.io (&aposSite&apos), you expressly agree to be bound by these Terms of Use and the Ambassy.io privacy policy. Ambassy.io reserves the right to change these Terms of Use at any time, effective immediately upon posting on the Site.
                 </p>
 
                 <h2 className="text-xl font-medium mt-12">
-                    Changes to Terms
+                    2. Use of the Site
                 </h2>
+                <h3 className="text-lg mt-8">
+                    Limited License
+                </h3>
                 <p className="mt-8 text-muted-foreground">
-                    Linkify reserves the right to modify these terms at any time. We will notify you of any changes by updating the &quot;Last updated&quot; data at the top of this page. You continued use of our website and services after any modifications indicates your acceptance of the new terms.
+                    You are granted a limited, non-exclusive, revocable, and non-transferable license to use and access the Site pursuant to these Terms of Use. Ambassy.io may change, suspend, or discontinue any aspect of the Site at any time without notice or liability.
+                </p>
+                <h3 className="text-lg mt-8">
+                    Site Operation
+                </h3>
+                <p className="mt-8 text-muted-foreground">
+                    United Arab Emirates (U.A.E) is our country of domicile. Ambassy.io controls this Site from the U.A.E. Users accessing the Site from other locations are responsible for compliance with local laws.
+                </p>
+                <h3 className="text-lg mt-8">
+                    No Commercial Use
+                </h3>
+                <p className="mt-8 text-muted-foreground">
+                    This Site may not be used for commercial purposes without prior written consent from Ambassy.io.
                 </p>
 
                 <h2 className="text-xl font-medium mt-12">
-                    Use of Services
+                    3. User Responsibilities
                 </h2>
-
                 <h3 className="text-lg mt-8">
-                    Eligibility
-                </h3>
-                <p className="mt-8">
-                    To use Linkify, you must be at least 18 years old and capable of entering into a binding contact.
-                </p>
-
-                <h3 className="text-lg mt-8">
-                    Account Registration
-                </h3>
-                <div className="mt-8">
-                    <ul className="list-disc ml-8 text-muted-foreground">
-                        <li>You must provide accurate and complete information during the registration process.</li>
-                        <li>You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.</li>
-                        <li>You agree to notify us immediately of any unantuhorized use of your account.</li>
-                    </ul>
-                </div>
-
-                <h3 className="text-lg mt-8">
-                    Acceptable Use
-                </h3>
-                <div className="mt-8">
-                    You agree not to use Linkify for any unlawful or prohibited activities, including but not limited to:
-                    <ul className="list-disc text-muted-foreground ml-8">
-                        <li>Uploading or sharing content that is offensive, harmful, or violates any laws.</li>
-                        <li>Using the service to distribute spam or malicious content.</li>
-                        <li>Attempting to gain unauthorized access to other user accounts or Linkify&apos;s systems.</li>
-                    </ul>
-                </div>
-
-                <h2 className="text-xl font-medium mt-12">
-                    Link Shortening and Management
-                </h2>
-
-                <h3 className="text-lg mt-8">
-                    URL Shortening
+                    Your Account
                 </h3>
                 <p className="mt-8 text-muted-foreground">
-                    Linkify provides a URL shortening service that allows you to create shortened links from long URLs. You agree not to use this service to create links to illegal or harmful content.
+                    If you use the Ambassy.io Site, you are responsible for maintaining the confidentiality of your account and password and for restricting access to your account. You accept responsibility for all activities that occur under your account.
                 </p>
-
                 <h3 className="text-lg mt-8">
-                    Analytics
+                    Representations by You
                 </h3>
                 <p className="mt-8 text-muted-foreground">
-                    Linkify offers analytics for your shortened URLs. You agree to use this data responsibly and comply with all applicable privacy laws.
-                </p>
-
-                <h3 className="text-lg mt-8">
-                    QR Code Generation
-                </h3>
-                <p className="mt-8 text-muted-foreground">
-                    You may generate QR codes for your shortened URLs. You agree not to use QR codes for any malicious purposes.
-                </p>
-
-                <h3 className="text-lg mt-8">
-                    Business Transfers
-                </h3>
-                <p className="mt-8 text-muted-foreground">
-                    In the event of a merger, acquisition, or sale of all or a portion of our assets, your information may be transferred to the acquiring entity.
+                    By visiting the Site, you represent, warrant, and covenant that (a) you are at least 18 years old; (b) all materials submitted by you to Ambassy.io through the Site will not plagiarize, violate, or infringe upon the rights of any third party.
                 </p>
 
                 <h2 className="text-xl font-medium mt-12">
-                    User Content
+                    4. Intellectual Property
                 </h2>
+                <p className="mt-8 text-muted-foreground">
+                    Ambassy.io respects intellectual property rights and may terminate the privileges of any user who infringes such rights. The Site&aposs content is the property of Ambassy.io and protected by intellectual property laws.
+                </p>
 
+                <h2 className="text-xl font-medium mt-12">
+                    5. Purchases and Payments
+                </h2>
+                <p className="mt-8 text-muted-foreground">
+                    Ambassy.io accepts payment by Visa or Mastercard debit and credit cards in USD for its products and services. Once the payment is made, a confirmation notice will be sent via email within 1 minute of receipt of payment.
+                </p>
                 <h3 className="text-lg mt-8">
-                    Ownership
-                </h3>
-
-                <p className="mt-8 text-muted-foreground">
-                    You retain ownership of any content you upload or create using Linkify. However, by uploading or creating content, you grant Linkify a worldwide, non-exclusive, royalty-free license to use, reproduce, and display your content as necessary to provide our services.
-                </p>
-
-                <h2 className="text-xl font-medium mt-12">
-                    Responsibility
-                </h2>
-                <p className="mt-8 text-muted-foreground">
-                    You are solely responsible for the content you upload or create. Linkify does not endorse or assume any liability for user content.
-                </p>
-
-                <h2 className="text-xl font-medium mt-12">
-                    Privacy
-                </h2>
-
-                <p className="mt-8 text-muted-foreground">
-                    Your privacy is important to us. Please review our <Link href="/privacy" className="underline">Privacy Policy</Link> to understand how we collect, use, and protect your information.
-                </p>
-
-                <h2 className="text-xl font-medium mt-12">
-                    Termination
-                </h2>
-                <p className="mt-8 text-muted-foreground">
-                    Linkify reserves the right to suspend or terminate your account at any time, with or without notice, for any reason, including but not limited to violation of these terms.
-                </p>
-
-                <h2 className="text-xl font-medium mt-12">
-                    Disclaimers and Limitations of Liability
-                </h2>
-
-                <h3 className="text-lg mt-8">
-                    No Warranties
+                    Cancellation and Refund Policy
                 </h3>
                 <p className="mt-8 text-muted-foreground">
-                    Linkify is provided on an &quot;as is&quot; and &quot;as available&quot; basis. We do not warrant that the service will be uninterrupted, error-free, or free from viruses or other harmful components.
+                    Cancellations can be made at any time, but they are non-refundable. All services provided by Ambassy.io are non-refundable.
                 </p>
 
+                <h2 className="text-xl font-medium mt-12">
+                    6. Disclaimer and Liability
+                </h2>
+                <p className="mt-8 text-muted-foreground">
+                    Ambassy.io makes no warranties of any kind regarding the Site. Ambassy.io shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from your use of the Site.
+                </p>
                 <h3 className="text-lg mt-8">
-                    Limitation of Liability
+                    Indemnity
                 </h3>
                 <p className="mt-8 text-muted-foreground">
-                    In no event shall Linkify be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of the service.
+                    You agree to indemnify and hold Ambassy.io, its subsidiaries, affiliates, officers, agents, and employees harmless from any claims, damages, or expenses arising from your use of the Site.
                 </p>
 
                 <h2 className="text-xl font-medium mt-12">
-                    Governing Law
+                    7. General Provisions
                 </h2>
+                <h3 className="text-lg mt-8">
+                    Applicable Law
+                </h3>
                 <p className="mt-8 text-muted-foreground">
-                    These terms shall be governed and construed in accordance with the laws of India, without regard to its conflict of law provisions.
+                    The laws of the United Arab Emirates shall govern the use of the Site and these Terms of Use. Any disputes shall be heard only by a court of competent jurisdiction in the U.A.E.
                 </p>
-
-                <h2 className="text-xl font-medium mt-12">
-                    Contact Us
-                </h2>
+                <h3 className="text-lg mt-8">
+                    OFAC Sanctioned Countries
+                </h3>
                 <p className="mt-8 text-muted-foreground">
-                    If you have any questions or concerns about this Privacy Policy, please contact us at support@linkify.io.
+                    Ambassy.io will not trade with or provide any services to individuals and companies owned or controlled by, or acting for or on behalf of, OFAC-targeted countries and individuals, groups, and entities.
+                </p>
+                <h3 className="text-lg mt-8">
+                    Severability
+                </h3>
+                <p className="mt-8 text-muted-foreground">
+                    If any provision of these Terms of Use is held invalid, the remaining provisions shall continue in full force and effect.
                 </p>
 
                 <p className="mt-8 font-medium">
-                    By using Linkify, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions.
+                    By using the Ambassy.io Site, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.
                 </p>
             </AnimationContainer>
         </MaxWidthWrapper>

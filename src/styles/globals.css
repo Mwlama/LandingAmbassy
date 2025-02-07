@@ -108,3 +108,25 @@ html, body {
 .not-found {
   box-shadow: rgba(150, 18, 226, 0.3) 5px 5px;
 }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.video-banner-scroll {
+  width: 200%;
+  display: flex;
+  animation: scroll 60s linear infinite;
+}
+
+.video-banner-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* .black-gradient {
+  background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
+} */

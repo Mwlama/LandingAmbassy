@@ -2,30 +2,30 @@ import { HelpCircleIcon, LineChartIcon, Link2Icon, LockIcon, NewspaperIcon, QrCo
 
 export const NAV_LINKS = [
     {
-        title: "Features",
+        title: "How It Works",
         href: "/features",
         menu: [
             {
-                title: "Link Shortening",
-                tagline: "Shorten links and track their performance.",
+                title: "For Ambassador",
+                tagline: "Accept, Share, and Money.",
                 href: "/features/link-shortening",
                 icon: Link2Icon,
             },
             {
-                title: "Password Protection",
-                tagline: "Secure your links with a password.",
+                title: "For Pro",
+                tagline: "Create your Army.",
                 href: "/features/password-protection",
                 icon: LockIcon,
             },
             {
-                title: "Advanced Analytics",
-                tagline: "Gain insights into who is clicking your links.",
+                title: "For VIP",
+                tagline: "Fully Automated campaigns.",
                 href: "/features/analytics",
                 icon: LineChartIcon,
             },
             {
-                title: "Custom QR Codes",
-                tagline: "Use QR codes to reach your audience.",
+                title: "Market Place",
+                tagline: "Buy or Create Shop or Brand.",
                 href: "/features/qr-codes",
                 icon: QrCodeIcon,
             },
@@ -36,7 +36,7 @@ export const NAV_LINKS = [
         href: "/pricing",
     },
     {
-        title: "Enterprise",
+        title: "Benefits",
         href: "/enterprise",
     },
     {
@@ -44,21 +44,18 @@ export const NAV_LINKS = [
         href: "/resources",
         menu: [
             {
-                title: "Blog",
-                tagline: "Read articles on the latest trends in tech.",
-                href: "/resources/blog",
+                title: "AI Tools",
+                tagline: "Use Our AIs to create, generate and much more.",
+                href: "/resources/Aitools",
                 icon: NewspaperIcon,
             },
             {
-                title: "Help",
-                tagline: "Get answers to your questions.",
+                title: "Knowledge for Success",
+                tagline: "Get the best practices in digital, business and AI.",
                 href: "/resources/help",
                 icon: HelpCircleIcon,
             },
         ]
     },
-    {
-        title: "Changelog",
-        href: "/changelog",
-    },
+  
 ];
