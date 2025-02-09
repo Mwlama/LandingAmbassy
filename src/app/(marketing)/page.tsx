@@ -29,8 +29,7 @@ const HomePage = async () => {
             <ThemeToggle />
             {/* Hero Section */}
             <MaxWidthWrapper>
-            
-                <div className="flex flex-col items-center justify-center w-full text-center bg-gradient-to-t from-background">
+                <div className="flex flex-col items-center justify-center w-full text-center ">
                     <SearchBar />
                     {/* <AnimationContainer className="flex flex-col items-center justify-center w-full text-center">
                         <button className="group relative grid overflow-hidden rounded-full px-4 py-1 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200">
@@ -84,6 +83,8 @@ const HomePage = async () => {
                     </AnimationContainer> */}
                 </div>
             </MaxWidthWrapper >
+            
+            {/* Pricing Section */}
             <MaxWidthWrapper className="py-10">
                 <AnimationContainer delay={0.1}>
                     <div className="flex flex-col items-center lg:items-center justify-center w-full py-8 max-w-xl mx-auto">
@@ -106,66 +107,8 @@ const HomePage = async () => {
           <div className="max-w-7xl mx-auto px-4">
             <VideoBanner />
           </div>
-          <div className="max-w-7xl mx-auto px-4">
-            <About />
-          </div>
-          
-        </section>
-
-            {/* Companies Section */}
-            <MaxWidthWrapper>
-                <AnimationContainer delay={0.4}>
-                    <div className="py-14">
-                        <div className="mx-auto px-4 md:px-8">
-                            <h2 className="text-center text-sm font-medium font-heading text-neutral-400 uppercase">
-                            IN 3 CLICKS YOU CAN GO VIRAL
-                            </h2>
-                            <div className="mt-8">
-                                <ul className="flex flex-wrap items-center gap-x-6 gap-y-6 md:gap-x-16 justify-center">
-                                    {COMPANIES.map((company) => (
-                                        <li key={company.name}>
-                                            <Image
-                                                src={company.logo}
-                                                alt={company.name}
-                                                width={80}
-                                                height={80}
-                                                quality={100}
-                                                className="w-28 h-auto"
-                                            />
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </AnimationContainer>
-            </MaxWidthWrapper>
-           
-            
-            {/* Features Section */}
-            <MaxWidthWrapper className="pt-10">
-                <AnimationContainer delay={0.1}>
-                    <div className="flex flex-col w-full items-center lg:items-center justify-center py-8">
-                        <MagicBadge title="Features" />
-                        <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
-                            Manage Campaigns Like a Pro
-                        </h2>
-                        <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-                            Ambassy: The Ultimate Communication Tool to Share, Monetize & Organize All Your Campaigns in One Place.
-                        </p>
-                    </div>
-                </AnimationContainer>
-                <AnimationContainer delay={0.2}>
-                    <BentoGrid className="py-8">
-                        {CARDS.map((feature, idx) => (
-                            <BentoCard key={idx} {...feature} />
-                        ))}
-                    </BentoGrid>
-                </AnimationContainer>
-            </MaxWidthWrapper>
-
-            {/* Process Section */}
-            <MaxWidthWrapper className="py-10">
+          {/* Process Section */}
+          <MaxWidthWrapper className="py-10">
                 <AnimationContainer delay={0.1}>
                     <div className="flex flex-col items-center lg:items-center justify-center w-full py-8 max-w-xl mx-auto">
                         <MagicBadge title="The Process" />
@@ -199,10 +142,60 @@ const HomePage = async () => {
                         </AnimationContainer>
                     ))}
                 </div>
+                <div className="max-w-7xl mx-auto px-4">
+                     <About />
+                </div>
             </MaxWidthWrapper>
+          
+          
+        </section>
 
-            {/* Pricing Section */}
+            {/* Companies Section */}
+            <MaxWidthWrapper>
+                <AnimationContainer delay={0.4}>
+                    <div className="py-14">
+                        <div className="mx-auto px-4 md:px-8">
+                                <ul className="flex flex-wrap items-center gap-x-6 gap-y-6 md:gap-x-16 justify-center">
+                                    {COMPANIES.map((company) => (
+                                        <li key={company.name}>
+                                            <Image
+                                                src={company.logo}
+                                                alt={company.name}
+                                                width={80}
+                                                height={80}
+                                                quality={100}
+                                                className="w-28 h-auto"
+                                            />
+                                        </li>
+                                    ))}
+                                </ul>
+                        </div>
+                    </div>
+                </AnimationContainer>
+            </MaxWidthWrapper>
+           
             
+            {/* Features Section */}
+            <MaxWidthWrapper className="pt-10">
+                <AnimationContainer delay={0.1}>
+                    <div className="flex flex-col w-full items-center lg:items-center justify-center py-8">
+                        <MagicBadge title="Features" />
+                        <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
+                            Manage Campaigns Like a Pro
+                        </h2>
+                        <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
+                            Ambassy: The Ultimate Communication Tool to Share, Monetize & Organize All Your Campaigns in One Place.
+                        </p>
+                    </div>
+                </AnimationContainer>
+                <AnimationContainer delay={0.2}>
+                    <BentoGrid className="py-8">
+                        {CARDS.map((feature, idx) => (
+                            <BentoCard key={idx} {...feature} />
+                        ))}
+                    </BentoGrid>
+                </AnimationContainer>
+            </MaxWidthWrapper>
 
             {/* CTA Section */}
             <MaxWidthWrapper className="mt-20 max-w-[100vw] overflow-x-hidden scrollbar-hide">
