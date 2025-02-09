@@ -23,8 +23,12 @@ const HeroSection: React.FC = () => {
     }, 2000);
   };
 
+  const heroSectionClasses = showStats
+    ? "relative flex items-center justify-center w-full overflow-hidden rounded-3xl my-0" // Remove height restrictions
+    : "relative h-[75vh] max-h-[1000px] flex items-center justify-center w-full overflow-hidden rounded-3xl my-0"; // Initial height
+
   return (
-    <div className="relative h-[75vh] max-h-[1000px] flex items-center justify-center w-full overflow-hidden rounded-3xl my-0">
+    <div className={heroSectionClasses}>
       <div className="absolute inset-0 w-full h-full">
         <MemoizedGridGlobe />
       </div>
@@ -77,8 +81,6 @@ const HeroSection: React.FC = () => {
               </button>
             </div>
           </div>
-
-          
 
           {/* Stats Section */}
           {showStats && (
