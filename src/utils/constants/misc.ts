@@ -18,16 +18,16 @@ export const COMPANIES = [
         logo: "/assets/facebook.svg",
     },
     {
-        name: "Linear",
-        logo: "/assets/linkedin.svg",
-    },
-    {
         name: "Raycast",
         logo: "/assets/x.svg",
     },
     {
         name: "Labelbox",
         logo: "/assets/youtube.svg",
+    },
+    {
+        name: "Labelbox",
+        logo: "/assets/snapchat.svg",
     }
     
 ] as const;

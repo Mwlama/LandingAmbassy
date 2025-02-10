@@ -152,6 +152,8 @@ const HomePage = async () => {
             {/* Companies Section */}
             <MaxWidthWrapper>
                 <AnimationContainer delay={0.4}>
+                <LampContainer>
+
                     <div className="py-14">
                         <div className="mx-auto px-4 md:px-8">
                                 <ul className="flex flex-wrap items-center gap-x-6 gap-y-6 md:gap-x-16 justify-center">
@@ -170,6 +172,7 @@ const HomePage = async () => {
                                 </ul>
                         </div>
                     </div>
+                    </LampContainer>
                 </AnimationContainer>
             </MaxWidthWrapper>
            
@@ -199,7 +202,6 @@ const HomePage = async () => {
             {/* CTA Section */}
             <MaxWidthWrapper className="mt-20 max-w-[100vw] overflow-x-hidden scrollbar-hide">
                 <AnimationContainer delay={0.1}>
-                    <LampContainer>
                         <div className="flex flex-col items-center justify-center relative w-full text-center">
                             <h2 className="bg-gradient-to-b from-neutral-800 to-neutral-400 py-4 bg-clip-text text-center text-4xl md:text-7xl !leading-[1.15] font-medium font-heading tracking-tight text-transparent mt-8">
                                 Step into the future of Marketing management
@@ -214,7 +216,6 @@ const HomePage = async () => {
                                 </Button>
                             </div>
                         </div>
-                    </LampContainer>
                 </AnimationContainer>
             </MaxWidthWrapper>
 

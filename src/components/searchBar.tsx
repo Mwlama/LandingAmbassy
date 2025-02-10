@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-transparent bg-opacity-60 rounded-3xl"></div>
 
       <AnimationContainer className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-neutral-700 via-white to-neutral-700 mb-6">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 to-neutral-400 mb-6">
           Your unstoppable Army of{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-500 to-violet-500">
             Ambassadors

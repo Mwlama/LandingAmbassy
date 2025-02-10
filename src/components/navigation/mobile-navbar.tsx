@@ -31,7 +31,7 @@ const MobileNavbar = () => {
     return (
         <div className="flex lg:hidden items-center">
             <div className="flex-1" /> {/* This pushes the following items to the right */}
-            <div className="flex items-center gap-6"> {/* Increased gap between theme toggle and menu */}
+            <div className="flex items-center gap-69"> {/* Increased gap between theme toggle and menu */}
                 <ThemeToggle />
                 <Sheet open={isOpen} onOpenChange={setIsOpen}>
                     <SheetTrigger asChild>
