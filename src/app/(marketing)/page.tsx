@@ -26,7 +26,6 @@ const HomePage = async () => {
     return (
         
         <div className="overflow-x-hidden scrollbar-hide size-full">
-            <ThemeToggle />
             {/* Hero Section */}
             <MaxWidthWrapper>
                 <div className="flex flex-col items-center justify-center w-full text-center ">

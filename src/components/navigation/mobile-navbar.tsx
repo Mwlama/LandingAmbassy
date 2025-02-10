@@ -18,11 +18,10 @@ import { useAuth } from "@clerk/nextjs";
 import { LucideIcon, Menu, X } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from 'react';
+import ThemeToggle from "../ui/ThemeToggle";
 
 const MobileNavbar = () => {
-
     const { isSignedIn, signOut } = useAuth();
-
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const handleClose = () => {
@@ -30,21 +29,25 @@ const MobileNavbar = () => {
     };
 
     return (
-        <div className="flex lg:hidden items-center justify-end">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                <SheetTrigger asChild>
-                    <Button size="icon" variant="ghost">
-                        <Menu className="w-5 h-5" />
-                    </Button>
-                </SheetTrigger>
-                <SheetContent className="w-screen">
-                    <SheetClose asChild className="absolute top-3 right-5 bg-background z-20 flex items-center justify-center">
-                        <Button size="icon" variant="ghost" className="text-neutral-600">
-                            <X className="w-5 h-5" />
+        <div className="flex lg:hidden items-center">
+            <div className="flex-1" /> {/* This pushes the following items to the right */}
+            <div className="flex items-center gap-6"> {/* Increased gap between theme toggle and menu */}
+                <ThemeToggle />
+                <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                    <SheetTrigger asChild>
+                        <Button size="icon" variant="ghost">
+                            <Menu className="w-5 h-5" />
                         </Button>
-                    </SheetClose>
-                    <div className="flex flex-col items-start w-full py-2 mt-10">
-                        <div className="flex items-center justify-evenly w-full space-x-2">
+                    </SheetTrigger>
+                    <SheetContent className="w-screen">
+                        <SheetClose asChild className="absolute top-3 right-5 bg-background z-20 flex items-center justify-center">
+                            <Button size="icon" variant="ghost" className="text-neutral-600">
+                                <X className="w-5 h-5" />
+                            </Button>
+                        </SheetClose>
+
+                        {/* Authentication Links */}
+                        <div className="flex items-center justify-evenly w-full space-x-2 mt-4">
                             {isSignedIn ? (
                                 <Link href="/dashboard" className={buttonVariants({ variant: "outline", className: "w-full" })}>
                                     Dashboard
@@ -60,8 +63,10 @@ const MobileNavbar = () => {
                                 </>
                             )}
                         </div>
-                        <ul className="flex flex-col items-start w-full mt-6">
-                            <Accordion type="single" collapsible className="!w-full">
+
+                        {/* Navigation Links */}
+                        <div className="w-full mt-6">
+                            <Accordion type="single" collapsible className="w-full">
                                 {NAV_LINKS.map((link) => (
                                     <AccordionItem key={link.title} value={link.title} className="last:border-none">
                                         {link.menu ? (
@@ -72,12 +77,15 @@ const MobileNavbar = () => {
                                                 <AccordionContent>
                                                     <ul
                                                         onClick={handleClose}
-                                                        className={cn(
-                                                            "w-full",
-                                                        )}
+                                                        className={cn("w-full")}
                                                     >
                                                         {link.menu.map((menuItem) => (
-                                                            <ListItem key={menuItem.title} title={menuItem.title} href={menuItem.href} icon={menuItem.icon}>
+                                                            <ListItem 
+                                                                key={menuItem.title} 
+                                                                title={menuItem.title} 
+                                                                href={menuItem.href} 
+                                                                icon={menuItem.icon}
+                                                            >
                                                                 {menuItem.tagline}
                                                             </ListItem>
                                                         ))}
@@ -96,12 +104,12 @@ const MobileNavbar = () => {
                                     </AccordionItem>
                                 ))}
                             </Accordion>
-                        </ul>
-                    </div>
-                </SheetContent>
-            </Sheet>
+                        </div>
+                    </SheetContent>
+                </Sheet>
+            </div>
         </div>
-    )
+    );
 };
 
 const ListItem = React.forwardRef<
@@ -130,8 +138,8 @@ const ListItem = React.forwardRef<
                 </p>
             </Link>
         </li>
-    )
-})
-ListItem.displayName = "ListItem"
+    );
+});
+ListItem.displayName = "ListItem";
 
-export default MobileNavbar
+export default MobileNavbar;

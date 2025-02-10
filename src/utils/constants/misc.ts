@@ -29,6 +29,7 @@ export const COMPANIES = [
         name: "Labelbox",
         logo: "/assets/youtube.svg",
     }
+    
 ] as const;
 
 export const PROCESS = [
@@ -49,29 +50,3 @@ export const PROCESS = [
     },
 ] as const;
 
-export const FEATURES = [
-    {
-        title: "Link shortening",
-        description: "Create short links that are easy to remember and share.",
-    },
-    {
-        title: "Advanced analytics",
-        description: "Track and measure the performance of your links.",
-    },
-    {
-        title: "Password protection",
-        description: "Secure your links with a password.",
-    },
-    {
-        title: "Custom QR codes",
-        description: "Generate custom QR codes for your links.",
-    },
-    {
-        title: "Link expiration",
-        description: "Set an expiration date for your links.",
-    },
-    {
-        title: "Team collaboration",
-        description: "Share links with your team and collaborate in real-time.",
-    },
-] as const;

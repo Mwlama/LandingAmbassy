@@ -118,7 +118,7 @@ const HeroSection: React.FC = () => {
               {/* Stats Text Below Images */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4 text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-500 to-violet-500">
                 <p className="text-lg font-bold">5,345 Ambassadors Available</p>
-                <p className="text-lg font-bold">Reach Over 3M People</p>
+                <p className="text-lg font-bold">Reach Over 3M People Worldwide</p>
                 <p className="text-lg font-bold">Promote 1,000+ Brands</p>
               </div>
             </div>

@@ -19,6 +19,7 @@ import React, { useEffect, useState } from "react";
 import MaxWidthWrapper from "../global/max-width-wrapper";
 import MobileNavbar from "./mobile-navbar";
 import AnimationContainer from "../global/animation-container";
+import ThemeToggle from "../ui/ThemeToggle";
 
 const Navbar = () => {
     const { user } = useClerk();
@@ -116,14 +117,16 @@ const Navbar = () => {
                             ))}
                         </NavigationMenuList>
                     </NavigationMenu>
-
+                            
                     {/* User Authentication Links */}
                     <div className="hidden lg:flex items-center">
+                    <ThemeToggle />
                         {user ? (
                             <Link href="/dashboard" className={buttonVariants({ size: "sm" })}>
                                 Dashboard
                             </Link>
                         ) : (
+                            
                             <div className="flex items-center gap-x-4">
                                 <Link
                                     href="/auth/sign-in"
