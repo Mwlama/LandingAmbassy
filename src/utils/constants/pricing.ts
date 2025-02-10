@@ -1,10 +1,10 @@
 export const PLANS = [
     {
         name: "Ambassador",
-        info: "For most individuals",
+        info: "For any social media user",
         price: {
-            monthly: 0,
-            yearly: 0,
+            monthly: "Always Free",
+            yearly: "Always Free",
         },
         features: [
             { text: "Create Ambassador profile" },

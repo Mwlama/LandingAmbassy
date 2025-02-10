@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const generateMetadata = ({
-    title = `${process.env.NEXT_PUBLIC_APP_NAME} - The Communication Management Platform for Businesses`,
+    title = `${process.env.NEXT_PUBLIC_APP_NAME} Ambassy - The Communication Management Platform`,
     description = `${process.env.NEXT_PUBLIC_APP_NAME} is the Ambassy platform for businesses. It helps you build, brand, and track your Ambassadors.`,
-    image = "/thumbnail.png",
+    image = "/src/app/favicon.ico",
     icons = [
         {
             rel: "apple-touch-icon",
