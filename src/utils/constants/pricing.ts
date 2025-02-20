@@ -33,7 +33,7 @@ export const PLANS = [
             { text: "Priority support", tooltip: "Get faster responses from our team" },
             { text: "Custom campaign creation", tooltip: "Launch personalized marketing campaigns" },
             { text: "Unlimited influencer outreach", tooltip: "Connect with unlimited influencers" },
-            { text: "Campaign performance tracking", tooltip: "Monitor the success of your campaigns" },
+            { text: "Performance tracking", tooltip: "Monitor the success of your campaigns" },
             { text: "AI powered chatbot", tooltip: "Automate customer interactions" },
         ],
         btn: {
