@@ -38,11 +38,7 @@ const Footer = () => {
                                             Pricing
                                         </Link>
                                     </li>
-                                    <li className="mt-2">
-                                        <Link href="" className="hover:text-foreground transition-all duration-300">
-                                            Testimonials
-                                        </Link>
-                                    </li>
+                                    
                                     <li className="mt-2">
                                         <Link href="" className="hover:text-foreground transition-all duration-300">
                                             Integration
@@ -51,37 +47,6 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </AnimationContainer>
-                        <AnimationContainer delay={0.3}>
-                            <div className="mt-10 md:mt-0 flex flex-col">
-                                <h3 className="text-base font-medium text-white">
-                                    Integrations
-                                </h3>
-                                <ul className="mt-4 text-sm text-muted-foreground">
-                                    <li className="">
-                                        <Link href="https://www.facebook.com/ambassyapp/" className="hover:text-foreground transition-all duration-300">
-                                            Facebook
-                                        </Link>
-                                    </li>
-                                    <li className="mt-2">
-                                        <Link href="https://www.instagram.com/ambassy.io/" className="hover:text-foreground transition-all duration-300">
-                                            Instagram
-                                        </Link>
-                                    </li>
-                                    <li className="mt-2">
-                                        <Link href="" className="hover:text-foreground transition-all duration-300">
-                                            Twitter
-                                        </Link>
-                                    </li>
-                                    <li className="mt-2">
-                                        <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
-                                            LinkedIn
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
-                        </AnimationContainer>
-                    </div>
-                    <div className="md:grid md:grid-cols-2 md:gap-8">
                         <AnimationContainer delay={0.5}>
                             <div className="mt-10 md:mt-0 flex flex-col">
                                 <h3 className="text-base font-medium text-white">
@@ -106,6 +71,68 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </AnimationContainer>
+                    </div>
+                    <div className="md:grid md:grid-cols-2 md:gap-8">
+                    <AnimationContainer delay={0.3}>
+                            <div className="mt-10 md:mt-0 flex flex-col">
+                                <h3 className="text-base font-medium text-white">
+                                    Follow Us
+                                </h3>
+                                <ul className="mt-4 grid grid-cols-5 gap-1">
+                                    <li>
+                                        <Link href="https://www.facebook.com/ambassyapp/" className="hover:text-foreground transition-all duration-300">
+                                            <img src="/assets/facebook.svg" alt="Facebook" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="https://www.instagram.com/ambassy.io/" className="hover:text-foreground transition-all duration-300">
+                                            <img src="/assets/instagram.svg" alt="Instagram" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="" className="hover:text-foreground transition-all duration-300">
+                                            <img src="/assets/x.svg" alt="Twitter" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
+                                            <img src="/assets/linkedin.svg" alt="LinkedIn" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
+                                            <img src="/assets/snap.svg" alt="Snapchat" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
+                                            <img src="/assets/twitch.svg" alt="Twitch" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
+                                            <img src="/assets/telegram.svg" alt="Telegram" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
+                                            <img src="/assets/discord.svg" alt="Discord" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
+                                            <img src="/assets/tiktok.svg" alt="Discord" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
+                                            <img src="/assets/youtube.svg" alt="Discord" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </AnimationContainer>
+                        
                         <p className="text-muted-foreground mt-4 text-sm text-start">
                             Connecting brands with the perfect influencers to grow their reach and impact.
                         </p>

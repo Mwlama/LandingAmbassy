@@ -79,11 +79,12 @@ const HeroSection: React.FC = () => {
           </AnimationContainer>
 
           {/* Right Column - Globe Animation and Stats */}
-          <div className="relative h-full">
-            {/* Globe Animation */}
-            <div className="absolute inset-0 z-0">
-              <MemoizedGridGlobe />
-            </div>
+          <div className="relative h-full w-full">
+  {/* Globe Animation */}
+  <div className="absolute inset-0 z-0 w-full h-full">
+    <MemoizedGridGlobe />
+  </div>
+
 
             {/* Stats Section overlaid on Globe */}
             {showStats && (
