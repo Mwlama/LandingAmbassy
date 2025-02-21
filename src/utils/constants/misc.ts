@@ -6,30 +6,55 @@ export const PAGINATION_LIMIT = 10;
 
 export const COMPANIES = [
     {
-        name: "Asana",
+        name: "Telegram",
+        logo: "/assets/telegram.svg",
+        url: "https://www.snapchat.com/add/your-username"
+    },
+    {
+        name: "Discord",
+        logo: "/assets/discord.svg",
+        url: "https://www.snapchat.com/add/your-username"
+    },
+    {
+        name: "Snapchat",
+        logo: "/assets/snap.svg",
+        url: "https://www.snapchat.com/add/your-username"
+    },
+    {
+        name: "TikTok",
         logo: "/assets/tiktok.svg",
+        url: "https://www.tiktok.com/@ambassy.io"
     },
     {
-        name: "Tidal",
+        name: "Instagram",
         logo: "/assets/instagram.svg",
+        url: "https://www.instagram.com/ambassy.io/"
     },
     {
-        name: "Innovaccer",
+        name: "Facebook",
         logo: "/assets/facebook.svg",
+        url: "https://www.facebook.com/ambassyapp/"
     },
     {
-        name: "Raycast",
+        name: "Twitter",
         logo: "/assets/x.svg",
+        url: "https://twitter.com/your-profile"
     },
     {
-        name: "Labelbox",
+        name: "YouTube",
         logo: "/assets/youtube.svg",
+        url: "https://www.youtube.com/your-channel"
     },
     {
-        name: "Labelbox",
-        logo: "/assets/snapchat.svg",
+        name: "Linkedin",
+        logo: "/assets/linkedin.svg",
+        url: "www.linkedin.com/in/ambassy-app-327303352"
+    },
+    {
+        name: "Twitch",
+        logo: "/assets/twitch.svg",
+        url: "https://www.snapchat.com/add/your-username"
     }
-    
 ] as const;
 
 export const PROCESS = [

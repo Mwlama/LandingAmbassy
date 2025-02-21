@@ -14,7 +14,7 @@ const Footer = () => {
                 <AnimationContainer delay={0.1}>
                     <div className="flex flex-col items-start justify-start md:max-w-[200px]">
                     <div className="flex items-start">
-                        <Image src="/icons/Ambassylogo.png" alt="Ambassy Logo"  width={27} height={27}  />
+                        <Image src="/icons/Ambassylogo.png" alt="Ambassy Logo"  width={100} height={100}  />
                     </div>
                         <p className="text-muted-foreground mt-4 text-sm text-start">
                             Connecting brands with the perfect influencers to grow their reach and impact.
@@ -60,12 +60,12 @@ const Footer = () => {
                                 </h3>
                                 <ul className="mt-4 text-sm text-muted-foreground">
                                     <li className="">
-                                        <Link href="" className="hover:text-foreground transition-all duration-300">
+                                        <Link href="https://www.facebook.com/ambassyapp/" className="hover:text-foreground transition-all duration-300">
                                             Facebook
                                         </Link>
                                     </li>
                                     <li className="mt-2">
-                                        <Link href="" className="hover:text-foreground transition-all duration-300">
+                                        <Link href="https://www.instagram.com/ambassy.io/" className="hover:text-foreground transition-all duration-300">
                                             Instagram
                                         </Link>
                                     </li>
@@ -75,7 +75,7 @@ const Footer = () => {
                                         </Link>
                                     </li>
                                     <li className="mt-2">
-                                        <Link href="" className="hover:text-foreground transition-all duration-300">
+                                        <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
                                             LinkedIn
                                         </Link>
                                     </li>
@@ -131,6 +131,9 @@ const Footer = () => {
                 </div>
 
             </div>
+            <div className="h-[10rem] lg:h-[10rem] hidden md:flex items-center justify-center">
+                <TextHoverEffect text="Ambassy" />
+            </div>
 
             <div className="mt-8 border-t border-border/40 pt-4 md:pt-8 md:flex md:items-center md:justify-between w-full">
                 <AnimationContainer delay={0.6}>
@@ -140,9 +143,7 @@ const Footer = () => {
                 </AnimationContainer>
             </div>
 
-            <div className="h-[10rem] lg:h-[10rem] hidden md:flex items-center justify-center">
-                <TextHoverEffect text="Ambassy" />
-            </div>
+           
         </footer>
     )
 }

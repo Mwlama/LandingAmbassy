@@ -28,63 +28,13 @@ const HomePage = async () => {
         <div className="overflow-x-hidden scrollbar-hide size-full">
             {/* Hero Section */}
             <MaxWidthWrapper>
-                <div className="flex flex-col items-center justify-center w-full text-center ">
+                <div className="flex flex-col justify-center w-full">
                     <SearchBar />
-                    {/* <AnimationContainer className="flex flex-col items-center justify-center w-full text-center">
-                        <button className="group relative grid overflow-hidden rounded-full px-4 py-1 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200">
-                            <span>
-                                <span className="spark mask-gradient absolute inset-0 h-[100%] w-[100%] animate-flip overflow-hidden rounded-full [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:animate-rotate before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]" />
-                            </span>
-                            <span className="backdrop absolute inset-[1px] rounded-full bg-neutral-950 transition-colors duration-200 group-hover:bg-neutral-900" />
-                            <span className="h-full w-full blur-md absolute bottom-0 inset-x-0 bg-gradient-to-tr from-primary/20"></span>
-
-                        </button>
-                        <h1 className="text-foreground text-center py-6 text-5xl font-medium tracking-normal text-balance sm:text-6xl md:text-7xl lg:text-8xl !leading-[1.15] w-full font-heading">
-                            Connect Social Media  <span className="text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
-                            Ambassadors
-                            </span>
-                        </h1>
-                        <p className="mb-12 text-lg tracking-tight text-muted-foreground md:text-xl text-balance">
-                            Connect with the Right Creators & Their Followers. 
-                            <br className="hidden md:block" />
-                            <span className="hidden md:block">Targeted by Niche & Location for Maximum Impact!</span>
-                        </p>
-                        
-                        <div className="flex items-center justify-center whitespace-nowrap gap-4 z-50">
-                            <Button asChild>
-                                <Link href={user ? "/dashboard" : "/auth/sign-in"} className="flex items-center">
-                                    Start Now
-                                    <ArrowRightIcon className="w-4 h-4 ml-2" />
-                                </Link>
-                            </Button>
-                        </div>
-                    </AnimationContainer> */}
-
-                    {/* <AnimationContainer delay={0.2} className="relative pt-20 pb-20 md:py-32 px-2 bg-transparent w-full">
-                        <div className="absolute md:top-[10%] left-1/2 gradient w-3/4 -translate-x-1/2 h-1/4 md:h-1/3 inset-0 blur-[5rem] animate-image-glow"></div>
-                        <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl">
-                            <BorderBeam
-                                size={250}
-                                duration={12}
-                                delay={9}
-                            />
-                            <Image
-                                src="/assets/dash.jpg"
-                                alt="Dashboard"
-                                width={1200}
-                                height={1200}
-                                quality={100}
-                                className="rounded-md lg:rounded-xl bg-foreground/10 ring-1 ring-border"
-                            />
-                            <div className="absolute -bottom-4 inset-x-0 w-full h-1/2 bg-gradient-to-t from-background z-40"></div>
-                            <div className="absolute bottom-0 md:-bottom-8 inset-x-0 w-full h-1/4 bg-gradient-to-t from-background z-50"></div>
-                        </div>
-                    </AnimationContainer> */}
                 </div>
             </MaxWidthWrapper >
             
             {/* Pricing Section */}
-            <MaxWidthWrapper className="py-10">
+            <MaxWidthWrapper >
                 <AnimationContainer delay={0.1}>
                     <div className="flex flex-col items-center lg:items-center justify-center w-full py-8 max-w-xl mx-auto">
                         <MagicBadge title="Simple Pricing" />
@@ -101,9 +51,8 @@ const HomePage = async () => {
                     <PricingCards />
                 </AnimationContainer>
                 
-            </MaxWidthWrapper>
-            <section className="py-12">
-          <div className="max-w-7xl mx-auto px-4">
+            </MaxWidthWrapper >
+          <div className="max-w-7xl mx-auto px-4 py-10">
             <VideoBanner />
           </div>
           {/* Process Section */}
@@ -145,42 +94,45 @@ const HomePage = async () => {
                      <About />
                 </div>
             </MaxWidthWrapper>
-          
-          
-        </section>
 
             {/* Companies Section */}
-            <MaxWidthWrapper>
+            <MaxWidthWrapper className="relative">
                 <AnimationContainer delay={0.4}>
-                <LampContainer>
-
-                    <div className="py-14">
-                        <div className="mx-auto px-4 md:px-8">
-                                <ul className="flex flex-wrap items-center gap-x-6 gap-y-6 md:gap-x-16 justify-center">
+                    <LampContainer>
+                        <div className="py-20 relative z-10">
+                            <div className="mx-auto px-4 md:px-8">
+                                <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-x-12">
                                     {COMPANIES.map((company) => (
                                         <li key={company.name}>
-                                            <Image
-                                                src={company.logo}
-                                                alt={company.name}
-                                                width={80}
-                                                height={80}
-                                                quality={100}
-                                                className="w-28 h-auto"
-                                            />
+                                            <a 
+                                                href={company.url} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                className="block transition-transform hover:scale-110"
+                                            >
+                                                <Image
+                                                    src={company.logo}
+                                                    alt={company.name}
+                                                    width={40}
+                                                    height={40}
+                                                    quality={100}
+                                                    className="w-10 h-10 md:w-12 md:h-12"
+                                                />
+                                            </a>
                                         </li>
                                     ))}
                                 </ul>
+                            </div>
                         </div>
-                    </div>
                     </LampContainer>
                 </AnimationContainer>
             </MaxWidthWrapper>
-           
-            
+
+
             {/* Features Section */}
-            <MaxWidthWrapper className="pt-10">
+            <MaxWidthWrapper>
                 <AnimationContainer delay={0.1}>
-                    <div className="flex flex-col w-full items-center lg:items-center justify-center py-8">
+                    <div className="flex flex-col w-full items-center lg:items-center justify-center py-1">
                         <MagicBadge title="Features" />
                         <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
                             Manage Campaigns Like a Pro

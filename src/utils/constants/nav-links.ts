@@ -24,8 +24,8 @@ export const NAV_LINKS = [
                 icon: LineChartIcon,
             },
             {
-                title: "Market Place",
-                tagline: "Buy or Create Shop or Brand.",
+                title: "For All",
+                tagline: "We share the Best with you.",
                 href: "/features/qr-codes",
                 icon: QrCodeIcon,
             },

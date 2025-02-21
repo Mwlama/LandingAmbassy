@@ -25,18 +25,18 @@ const HeroSection: React.FC = () => {
   return (
     <section className="relative h-[calc(100vh-4rem)] w-full">
       <div className="container h-full">
-        <div className="grid lg:grid-cols-2 gap-8 h-full pt-4"> {/* Reduced pt-8 to pt-4 */}
+        <div className="grid lg:grid-cols-2 gap-8 h-full"> {/* Reduced pt-8 to pt-4 */}
           {/* Left Column - Text Content */}
-          <AnimationContainer className="z-10 flex flex-col justify-start lg:justify-center pt-4">
+          <AnimationContainer className="z-10 flex flex-col justify-start lg:justify-center">
             <div className="max-w-xl">
-              <h1 className="text-left text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 to-neutral-400 mb-4"> {/* Reduced mb-6 to mb-4 */}
+              <h1 className="text-left text-4xl sm:text-5xl md:text-6xl font-bold text-white dark:text-black mb-1"> {/* Reduced mb-6 to mb-4 */}
                 Your unstoppable Army of{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-500 to-violet-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
                   Ambassadors
                 </span>
               </h1>
 
-              <p className="text-left text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-neutral-600 via-white to-neutral-600 mb-6"> {/* Reduced mb-8 to mb-6 */}
+              <p className="text-left text-xl md:text-2xl text-white dark:text-black mb-6"> {/* Reduced mb-8 to mb-6 */}
                 Connect with the Right Creators & Their Followers.
                 Targeted by Niche & Location for Maximum Impact!
               </p>
@@ -58,7 +58,7 @@ const HeroSection: React.FC = () => {
                     onClick={handleSearch}
                     disabled={isLoading || !searchQuery.trim()}
                     className="px-8 py-4 rounded-full text-white font-medium transition-all duration-300 mr-2 
-                      bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600
+                      bg-gradient-to-r from-fuchsia-600 to-blue-600 hover:from-blue-600 hover:to-fuchsia-600
                       disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isLoading ? (
@@ -87,40 +87,40 @@ const HeroSection: React.FC = () => {
               <div className="absolute inset-0 flex items-center justify-center z-10">
                 <div className="w-full max-w-2xl p-6 space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <div className="bg-black/80 rounded-xl p-4 backdrop-blur-sm border border-white/10 transform hover:scale-105 transition-transform">
+                    <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
                       <Image
                         src="/ambassador1.jpg"
                         alt="Ambassadors"
                         width={200}
-                        height={150}
+                        height={200}
                         className="w-full h-32 object-cover rounded-lg"
                       />
-                      <p className="text-center mt-2 text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-500 to-violet500">
-                        5,345 Ambassadors
+                      <p className="text-center mt-2 text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
+                        23k+ Users
                       </p>
                     </div>
-                    <div className="bg-black/80 rounded-xl p=4 backdrop-blur-sm border border-white/10 transform hover:scale105 transition-transform">
+                    <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
                       <Image
                         src="/ambassador3.jpg"
                         alt="Reach Potential"
                         width={200}
-                        height={150}
+                        height={200}
                         className="w-full h32 object-cover rounded-lg"
                       />
-                      <p className="text-center mt2 text-lg font-bold text-transparent bg-clipp-text bg-gradient-to-r from-violet400 via-fuchsia500 to-violet500">
-                        3M+ Global Reach
+                      <p className="text-center mt2 text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
+                        3M+ Reach
                       </p>
                     </div>
-                    <div className="bg-black/80 rounded-xl p=4 backdrop-blur-sm border border-white/10 transform hover:scale105 transition-transform">
+                    <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
                       <Image
                         src="/ambassador2.jpg"
                         alt="Brands Promoted"
                         width={200}
-                        height={150}
+                        height={200}
                         className="w-full h32 object-cover rounded-lg"
                       />
-                      <p className="text-center mt2 text-lg font-bold text-transparent bg-clipp-text bg-gradient-to-r from-violet400 via-fuchsia500 to-violet500">
-                        1,000+ Brands
+                      <p className="text-center mt2 text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
+                        6k+ Brands
                       </p>
                     </div>
                   </div>
