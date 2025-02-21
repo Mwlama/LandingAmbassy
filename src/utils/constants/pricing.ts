@@ -56,7 +56,7 @@ export const PLANS = [
             { text: "TikTok Ads Campaign", tooltip: "Launch high-performing TikTok Ads" },
         ],
         btn: {
-            text: "Contact team",
+            text: "Get Started",
             href: "/auth/sign-up?plan=business",
             variant: "default",
         }

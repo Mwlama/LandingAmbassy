@@ -14,11 +14,9 @@ const Footer = () => {
                 <AnimationContainer delay={0.1}>
                     <div className="flex flex-col items-start justify-start md:max-w-[200px]">
                     <div className="flex items-start">
-                        <Image src="/icons/Ambassylogo.png" alt="Ambassy Logo"  width={100} height={100}  />
+                        <Image src="/icons/Ambassylogo.png" alt="Ambassy Logo"  width={200} height={200}  />
                     </div>
-                        <p className="text-muted-foreground mt-4 text-sm text-start">
-                            Connecting brands with the perfect influencers to grow their reach and impact.
-                        </p>
+                        
                     </div>
                 </AnimationContainer>
 
@@ -84,25 +82,6 @@ const Footer = () => {
                         </AnimationContainer>
                     </div>
                     <div className="md:grid md:grid-cols-2 md:gap-8">
-                        <AnimationContainer delay={0.4}>
-                            <div className="">
-                                <h3 className="text-base font-medium text-white">
-                                    Resources
-                                </h3>
-                                <ul className="mt-4 text-sm text-muted-foreground">
-                                    <li className="mt-2">
-                                        <Link href="/resources/blog" className="hover:text-foreground transition-all duration-300">
-                                            Blog
-                                        </Link>
-                                    </li>
-                                    <li className="mt-2">
-                                        <Link href="/resources/help" className="hover:text-foreground transition-all duration-300">
-                                            Support
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
-                        </AnimationContainer>
                         <AnimationContainer delay={0.5}>
                             <div className="mt-10 md:mt-0 flex flex-col">
                                 <h3 className="text-base font-medium text-white">
@@ -127,6 +106,9 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </AnimationContainer>
+                        <p className="text-muted-foreground mt-4 text-sm text-start">
+                            Connecting brands with the perfect influencers to grow their reach and impact.
+                        </p>
                     </div>
                 </div>
 

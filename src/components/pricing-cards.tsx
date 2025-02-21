@@ -138,7 +138,7 @@ const PricingCards = () => {
                       (plan.name === "Pro" &&
                         "bg-purple-500 hover:bg-purple-500/80 text-white") ||
                       (plan.name === "VIP" &&
-                        "bg-yellow-500 hover:bg-yellow-500/80 text-white"),
+                        "bg-yellow-500 hover:bg-yellow-600/80 text-white"),
                   })}
                 >
                   {plan.btn.text}
