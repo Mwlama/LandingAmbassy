@@ -9,14 +9,14 @@ const World = dynamic(() => import("./Globe").then((m) => m.World), {
 
 const GridGlobe = () => {
   const globeConfig = {
-    pointSize: 4,
-    globeColor: "#000000",
+    pointSize: 6,
+    globeColor: "rgba(0, 0, 0, 0)", // Fully transparent
     showAtmosphere: true,
-    atmosphereColor: "#000000",
+    atmosphereColor: "rgba(0, 0, 0, 0)", // Semi-transparent white
     atmosphereAltitude: 0.1,
-    emissive: "#000000",
+    emissive: "rgba(0, 0, 0, 0)", // Fully transparent
     emissiveIntensity: 0.8,
-    shininess: 1,
+    shininess: 3,
     polygonColor: "rgb(255, 49, 149)",
     ambientLight: "#ffffff",
     directionalLeftLight: "#ffffff",
@@ -28,9 +28,9 @@ const GridGlobe = () => {
     maxRings: 3,
     initialPosition: { lat: 22.3193, lng: 114.1694 },
     autoRotate: true,
-    autoRotateSpeed: 0.5,
-    scale: 1.5, // Increased scale to enlarge the globe
-  };
+    autoRotateSpeed: 0.9,
+    scale: 1.8,
+};
 
   const colors = ["#ff009d", "#ff009d", "#ff009d"];
   const sampleArcs = [
