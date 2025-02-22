@@ -141,7 +141,7 @@ const Footer = () => {
 
             </div>
             <div className="h-[10rem] lg:h-[10rem] hidden md:flex items-center justify-center">
-                <TextHoverEffect text="Ambassy" />
+                <TextHoverEffect text="GO%35" />
             </div>
 
             <div className="mt-8 border-t border-border/40 pt-4 md:pt-8 md:flex md:items-center md:justify-between w-full">

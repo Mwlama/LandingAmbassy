@@ -132,7 +132,7 @@ const HomePage = async () => {
             {/* Features Section */}
             <MaxWidthWrapper>
                 <AnimationContainer delay={0.1}>
-                    <div className="flex flex-col w-full items-center lg:items-center justify-center py-1">
+                    <div className="flex flex-col w-full items-center lg:items-center justify-center">
                         <MagicBadge title="Features" />
                         <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
                             Manage Campaigns Like a Pro
