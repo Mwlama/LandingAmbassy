@@ -51,9 +51,8 @@ const ComingSoonPage = () => {
             </MaxWidthWrapper>
             <MaxWidthWrapper className="pt-20">
                 <AnimationContainer delay={0.4} className="w-full">
-                    <LampContainer className="max-w-2xl mx-auto">
                         <div className="flex flex-col items-center justify-center relative w-full text-center">
-                            <h2 className="bg-gradient-to-br from-neutral-300 to-neutral-500 py-4 bg-clip-text text-center text-4xl font-semibold font-heading tracking-tight text-transparent md:text-7xl mt-8">
+                            <h2 className="bg-gradient-to-b from-neutral-800 to-neutral-400 py-4 bg-clip-text text-center text-4xl font-semibold font-heading tracking-tight text-transparent md:text-7xl mt-8">
                                 The Future of Online Marketplaces
                             </h2>
                             <p className="text-muted-foreground mt-6 max-w-lg mx-auto text-base md:text-lg">
@@ -68,7 +67,6 @@ const ComingSoonPage = () => {
                                 </Button>
                             </div>
                         </div>
-                    </LampContainer>
                 </AnimationContainer>
             </MaxWidthWrapper>
         </>

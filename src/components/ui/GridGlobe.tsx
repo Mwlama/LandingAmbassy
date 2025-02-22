@@ -30,9 +30,9 @@ const GridGlobe = () => {
     autoRotate: true,
     autoRotateSpeed: 0.9,
     scale: 1.8,
-};
+  };
 
-  const colors = ["#ff009d", "#ff009d", "#ff009d"];
+  const colors = ["#8f0101", "#0c69c7", "#ffd700", "#1400ff"];
   const sampleArcs = [
     {
       order: 1,
@@ -290,15 +290,15 @@ const GridGlobe = () => {
 
   return (
     <div className="flex items-center justify-center absolute -left-5 top-36 md:top-40 w-full h-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-[1000px] px-4">
-        {/* Adjust the height of the globe container */}
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-transparent z-40" />
-        <div className="absolute w-full h-[80vh] z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} logos={[]} />
-        </div>
+    <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-[1000px] px-4">
+      {/* Adjust the height of the globe container */}
+      <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-transparent z-40" />
+      <div className="absolute w-full h-[80vh] z-10">
+        <World data={sampleArcs} globeConfig={globeConfig} logos={[]} />
       </div>
     </div>
-  );
+  </div>
+);
 };
 
 export default GridGlobe;

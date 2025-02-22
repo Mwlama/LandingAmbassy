@@ -100,15 +100,15 @@ const BenefitsPage: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           <motion.div 
             whileHover={{ scale: 1.05 }}
-            className="bg-purple-600 text-text-transparent bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-4 rounded-full font-semibold text-lg cursor-pointer"
+            className="bg-purple-600 text-text-transparent bg-gradient-to-r from-fuchsia-600 to-blue-600 px-8 py-4 rounded-full font-semibold text-lg cursor-pointer"
           >
-            Become a Pro User
+            Become a Pro
           </motion.div>
           <motion.div 
             whileHover={{ scale: 1.05 }}
-            className="bg-pink-600 text-text-transparent bg-gradient-to-l from-purple-500 to-pink-500 px-8 py-4 rounded-full font-semibold text-lg cursor-pointer"
+            className="bg-pink-600 text-text-transparent bg-gradient-to-r from-blue-600 to-fuchsia-600 px-8 py-4 rounded-full font-semibold text-lg cursor-pointer"
           >
-            Join as an Ambassador
+            Ambassador
           </motion.div>
         </div>
       </motion.div>

@@ -16,7 +16,7 @@ const AnalyticsPage = () => {
                     <div className="flex flex-col items-center justify-center py-10 max-w-lg mx-auto">
                         <MagicBadge title="VIP" />
                         <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold font-heading text-center mt-6 !leading-tight">
-                        The Ultimate Ambassador Marketing Suite
+                            The Ultimate Ambassador Marketing Suite
                         </h1>
                         <p className="text-base md:text-lg mt-6 text-center text-muted-foreground">
                             Gain deep insights into your link performance with real-time analytics. Track clicks, device usage, and more to optimize your strategy.
@@ -62,13 +62,12 @@ const AnalyticsPage = () => {
             </MaxWidthWrapper>
             <MaxWidthWrapper className="pt-20">
                 <AnimationContainer delay={0.4} className="w-full">
-                    <LampContainer className="max-w-2xl mx-auto">
                         <div className="flex flex-col items-center justify-center relative w-full text-center">
-                            <h2 className="bg-gradient-to-br from-neutral-300 to-neutral-500 py-4 bg-clip-text text-center text-4xl font-semibold font-heading tracking-tight text-transparent md:text-7xl mt-8">
+                            <h2 className="bg-gradient-to-b from-neutral-800 to-neutral-400 py-4 bg-clip-text text-center text-4xl font-semibold font-heading tracking-tight text-transparent md:text-7xl mt-8">
                                 The VIP Pass to Marketing Mastery
                             </h2>
                             <p className="text-muted-foreground mt-6 max-w-lg mx-auto text-base md:text-lg">
-                            Where Serious Influencers Meet Serious Technology
+                                Where Serious Influencers Meet Serious Technology
                             </p>
                             <div className="mt-6">
                                 <Button asChild>
@@ -79,7 +78,6 @@ const AnalyticsPage = () => {
                                 </Button>
                             </div>
                         </div>
-                    </LampContainer>
                 </AnimationContainer>
             </MaxWidthWrapper>
         </>

@@ -44,7 +44,7 @@ const LinkShorteningPage = () => {
                     <div className="py-14">
                         <div className="mx-auto px-4 md:px-8">
                             <h2 className="text-center text-sm font-medium font-heading text-neutral-400 uppercase">
-                                Trusted by the best in the industry
+                                Trusted by the best for the best
                             </h2>
                             <div className="mt-8">
                                 <ul className="flex flex-wrap items-center gap-x-6 gap-y-6 md:gap-x-16 justify-center py-8">
@@ -68,9 +68,8 @@ const LinkShorteningPage = () => {
             </MaxWidthWrapper>
             <MaxWidthWrapper className="pt-20">
                 <AnimationContainer delay={0.4} className="w-full">
-                    <LampContainer className="max-w-2xl mx-auto">
                         <div className="flex flex-col items-center justify-center relative w-full text-center">
-                            <h2 className="bg-gradient-to-br from-neutral-300 to-neutral-500 py-4 bg-clip-text text-center text-4xl font-semibold font-heading tracking-tight text-transparent md:text-7xl mt-8">
+                            <h2 className="bg-gradient-to-b from-neutral-800 to-neutral-400 py-4 bg-clip-text text-center text-4xl font-semibold font-heading tracking-tight text-transparent md:text-7xl mt-8">
                                 How quickly can I start collaborating?
                             </h2>
                             <p className="text-muted-foreground mt-6 max-w-lg mx-auto text-base md:text-lg">
@@ -85,7 +84,6 @@ const LinkShorteningPage = () => {
                                 </Button>
                             </div>
                         </div>
-                    </LampContainer>
                 </AnimationContainer>
             </MaxWidthWrapper>
         </>

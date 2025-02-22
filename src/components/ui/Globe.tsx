@@ -95,12 +95,12 @@ export function Globe({ globeConfig, data, logos }: WorldProps) {
 
   const defaultProps = {
     pointSize: 1,
-    atmosphereColor: "#ffffff",
+    atmosphereColor: "rgb(255, 242, 0)", // Fully transparent atmosphere
     showAtmosphere: true,
     atmosphereAltitude: 0.1,
-    polygonColor: "rgb(255, 255, 255)",
-    globeColor: "rgba(0, 0, 0, 0)",
-    emissive: "rgba(0, 0, 0, 0)",
+    polygonColor: "rgba(255, 49, 149, 0.8)", // Semi-transparent land areas
+    globeColor: "rgba(0, 0, 0, 0)", // Fully transparent globe (water area)
+    emissive: "rgba(0, 0, 0, 0)", // Fully transparent emissive
     emissiveIntensity: 0.1,
     shininess: 0.9,
     arcTime: 2000,
@@ -153,11 +153,11 @@ export function Globe({ globeConfig, data, logos }: WorldProps) {
       emissiveIntensity: number;
       shininess: number;
     };
-    globeMaterial.color = new Color(globeConfig.globeColor);
-    globeMaterial.emissive = new Color(globeConfig.emissive);
-    globeMaterial.emissiveIntensity = globeConfig.emissiveIntensity || 0.1;
-    globeMaterial.shininess = globeConfig.shininess || 0.9;
-  }, [globeConfig.globeColor, globeConfig.emissive, globeConfig.emissiveIntensity, globeConfig.shininess]);
+    globeMaterial.color = new Color(defaultProps.globeColor);
+    globeMaterial.emissive = new Color(defaultProps.emissive);
+    globeMaterial.emissiveIntensity = defaultProps.emissiveIntensity;
+    globeMaterial.shininess = defaultProps.shininess;
+  }, [defaultProps.globeColor, defaultProps.emissive, defaultProps.emissiveIntensity, defaultProps.shininess]);
 
   useEffect(() => {
     if (globeRef.current) {
