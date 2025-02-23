@@ -1,7 +1,7 @@
 export const PLANS = [
     {
         name: "Ambassador",
-        info: "For TikTokers, Instagramers, YouTubers, and all social media users",
+        info: "For TikTokers, Instagramers, YouTubers, etc...",
         price: {
             monthly: "Always Free",
             yearly: "Always Free",
