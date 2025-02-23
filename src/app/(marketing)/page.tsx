@@ -99,7 +99,7 @@ const HomePage = async () => {
             <MaxWidthWrapper className="relative">
                 <AnimationContainer delay={0.4}>
                     <LampContainer>
-                        <div className="py-20 relative z-10">
+                        <div className="py-6 relative z-10">
                             <div className="mx-auto px-4 md:px-8">
                                 <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-x-12">
                                     {COMPANIES.map((company) => (
@@ -152,7 +152,7 @@ const HomePage = async () => {
             </MaxWidthWrapper>
 
             {/* CTA Section */}
-            <MaxWidthWrapper className="mt-20 max-w-[100vw] overflow-x-hidden scrollbar-hide">
+            <MaxWidthWrapper className="mt-1 max-w-[100vw] overflow-x-hidden scrollbar-hide">
                 <AnimationContainer delay={0.1}>
                         <div className="flex flex-col items-center justify-center relative w-full text-center">
                             <h2 className="bg-gradient-to-b from-neutral-800 to-neutral-400 py-4 bg-clip-text text-center text-4xl md:text-7xl !leading-[1.15] font-medium font-heading tracking-tight text-transparent mt-8">

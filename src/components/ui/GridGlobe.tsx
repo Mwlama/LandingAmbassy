@@ -9,13 +9,13 @@ const World = dynamic(() => import("./Globe").then((m) => m.World), {
 
 const GridGlobe = () => {
   const globeConfig = {
-    pointSize: 6,
-    globeColor: "rgba(0, 0, 0, 0)", // Fully transparent
+    pointSize: 9,
+    globeColor: "#212121", // Fully transparent
     showAtmosphere: true,
-    atmosphereColor: "rgba(0, 0, 0, 0)", // Semi-transparent white
-    atmosphereAltitude: 0.1,
-    emissive: "rgba(0, 0, 0, 0)", // Fully transparent
-    emissiveIntensity: 0.8,
+    atmosphereColor: "#212121", // Semi-transparent white
+    atmosphereAltitude: 0.15,
+    emissive: "#212121", // Fully transparent
+    emissiveIntensity: 1,
     shininess: 3,
     polygonColor: "rgb(255, 49, 149)",
     ambientLight: "#ffffff",

@@ -1,20 +1,20 @@
+// LampContainer.tsx
 "use client";
 
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils";
 
-export const LampContainer = ({
-    children,
-    className,
-}: {
+interface LampContainerProps {
     children: React.ReactNode;
     className?: string;
-}) => {
+}
+
+export const LampContainer: React.FC<LampContainerProps> = ({ children, className }) => {
     return (
         <div
             className={cn(
-                "relative flex min-h-[400px] flex-col items-center justify-center overflow-hidden w-full rounded-md z-0",
+                "relative flex min-h-[200px] flex-col items-center justify-center overflow-hidden w-full rounded-md z-0",
                 className
             )}
         >
@@ -77,7 +77,7 @@ export const LampContainer = ({
                 <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[8rem] bg-background"></div>
             </div>
 
-            <div className="relative z-50 flex -translate-y-48 flex-col items-center px-5">
+            <div className="relative z-50 flex -translate-y-24 flex-col items-center px-5">
                 {children}
             </div>
         </div>
