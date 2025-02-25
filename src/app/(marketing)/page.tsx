@@ -16,6 +16,7 @@ import About from "@/components/about";
 import SearchBar from "@/components/searchBar";
 import GridGlobe from "@/components/ui/GridGlobe";
 import InternalLinksSection from "@/components/ui/aboutUs";
+import TwoWays from "@/components/ui/twoWays";
 
 const ThemeToggle = dynamic(() => import("@/components/ui/ThemeToggle"), { ssr: false });
 
@@ -94,6 +95,7 @@ const HomePage = async () => {
                 <div className="max-w-7xl mx-auto px-4">
                      <About />
                 </div>
+                
             </MaxWidthWrapper>
 
             {/* Companies Section */}
@@ -129,7 +131,20 @@ const HomePage = async () => {
                 </LampContainer>
             </AnimationContainer>
             </MaxWidthWrapper>
-            
+            <AnimationContainer delay={0.1}>
+                    <div className="flex flex-col w-full items-center lg:items-center justify-center">
+                    <MagicBadge title="Go For It" />
+                        <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
+                        Two ways to get started with Ambassy
+                        </h2>
+                        <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
+                        Join forces with Ambassy to amplify your brand's presence through our network of passionate ambassadors.
+                        </p>
+                    </div>
+                </AnimationContainer>
+            <AnimationContainer>
+                <TwoWays />
+            </AnimationContainer>
             {/* Features Section */}
             <MaxWidthWrapper>
                 <AnimationContainer delay={0.1}>
@@ -151,8 +166,11 @@ const HomePage = async () => {
                     </BentoGrid>
                 </AnimationContainer>
             </MaxWidthWrapper>
-            <InternalLinksSection />
 
+            <AnimationContainer>
+                <InternalLinksSection />
+            </AnimationContainer>
+                
             {/* CTA Section */}
             <MaxWidthWrapper className="mt-1 max-w-[100vw] overflow-x-hidden scrollbar-hide">
                 <AnimationContainer delay={0.1}>

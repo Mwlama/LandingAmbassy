@@ -11,7 +11,7 @@ export const NAV_LINKS = [
         menu: [
             {
                 title: "For Ambassador",
-                tagline: "Accept, Share, and Money.",
+                tagline: "Accept, Share, and Earn.",
                 href: "/features/link-shortening",
                 icon: Link2Icon,
             },
@@ -23,7 +23,7 @@ export const NAV_LINKS = [
             },
             {
                 title: "For VIP",
-                tagline: "Fully Automated campaigns.",
+                tagline: "Fully Automated Promotion.",
                 href: "/features/analytics",
                 icon: LineChartIcon,
             },
