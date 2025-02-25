@@ -2,6 +2,10 @@ import { HelpCircleIcon, LineChartIcon, Link2Icon, LockIcon, NewspaperIcon, QrCo
 
 export const NAV_LINKS = [
     {
+        title: "About Us",
+        href: "/aboutUs",
+    },
+    {
         title: "How It Works",
         href: "/features",
         menu: [

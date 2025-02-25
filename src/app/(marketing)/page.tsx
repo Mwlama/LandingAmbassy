@@ -15,6 +15,7 @@ import VideoBanner from "@/components/VideoBanner";
 import About from "@/components/about";
 import SearchBar from "@/components/searchBar";
 import GridGlobe from "@/components/ui/GridGlobe";
+import InternalLinksSection from "@/components/ui/aboutUs";
 
 const ThemeToggle = dynamic(() => import("@/components/ui/ThemeToggle"), { ssr: false });
 
@@ -97,39 +98,38 @@ const HomePage = async () => {
 
             {/* Companies Section */}
             <MaxWidthWrapper className="relative">
-  <AnimationContainer delay={0.4}>
-    <LampContainer>
-      <div className="py-6 relative z-10">
-        <div className="mx-auto px-4 md:px-8">
-          {/* Add margin-top for mobile only */}
-          <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-x-12 mt-8 sm:mt-0">
-            {COMPANIES.map((company) => (
-              <li key={company.name}>
-                <a 
-                  href={company.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block transition-transform hover:scale-110"
-                >
-                  <Image
-                    src={company.logo}
-                    alt={company.name}
-                    width={40}
-                    height={40}
-                    quality={100}
-                    className="w-10 h-10 md:w-12 md:h-12"
-                  />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </LampContainer>
-  </AnimationContainer>
-</MaxWidthWrapper>
-
-
+            <AnimationContainer delay={0.4}>
+                <LampContainer>
+                <div className="py-6 relative z-10">
+                    <div className="mx-auto px-4 md:px-8">
+                    {/* Add margin-top for mobile only */}
+                    <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-x-12 mt-8 sm:mt-0">
+                        {COMPANIES.map((company) => (
+                        <li key={company.name}>
+                            <a 
+                            href={company.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="block transition-transform hover:scale-110"
+                            >
+                            <Image
+                                src={company.logo}
+                                alt={company.name}
+                                width={40}
+                                height={40}
+                                quality={100}
+                                className="w-10 h-10 md:w-12 md:h-12"
+                            />
+                            </a>
+                        </li>
+                        ))}
+                    </ul>
+                    </div>
+                </div>
+                </LampContainer>
+            </AnimationContainer>
+            </MaxWidthWrapper>
+            
             {/* Features Section */}
             <MaxWidthWrapper>
                 <AnimationContainer delay={0.1}>
@@ -151,6 +151,7 @@ const HomePage = async () => {
                     </BentoGrid>
                 </AnimationContainer>
             </MaxWidthWrapper>
+            <InternalLinksSection />
 
             {/* CTA Section */}
             <MaxWidthWrapper className="mt-1 max-w-[100vw] overflow-x-hidden scrollbar-hide">
