@@ -118,15 +118,9 @@ const AboutUsPage: React.FC = () => {
             <motion.div variants={fadeInUp} className="flex justify-center gap-4">
               <Link
                 href="/get-started"
-                className="px-8 py-4 bg-gradient-to-r from-fuchsia-600 to-blue-600 text-white font-medium rounded-full hover:from-blue-600 hover:to-fuchsia-600 transition-all duration-300"
-              >
-                Get Started
-              </Link>
-              <Link
-                href="/showcase"
                 className="px-8 py-4 bg-transparent border border-white/20 backdrop-blur-sm text-white font-medium rounded-full hover:bg-white/10 transition-all duration-300"
               >
-                View Showcase
+                Get Started
               </Link>
             </motion.div>
           </motion.div>
@@ -219,25 +213,6 @@ const AboutUsPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <Link
-                  href="/our-mission"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-fuchsia-600 to-blue-600 text-white font-medium rounded-full hover:from-blue-600 hover:to-fuchsia-600 transition-all duration-300"
-                >
-                  Learn More
-                  <svg
-                    className="w-5 h-5 ml-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </Link>
               </div>
             </motion.div>
           </div>
@@ -326,25 +301,6 @@ const AboutUsPage: React.FC = () => {
                     <p className="text-gray-400">Industries</p>
                   </div>
                 </div>
-                <Link
-                  href="/our-team"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-fuchsia-600 to-blue-600 text-white font-medium rounded-full hover:from-blue-600 hover:to-fuchsia-600 transition-all duration-300"
-                >
-                  Meet the Team
-                  <svg
-                    className="w-5 h-5 ml-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </Link>
               </div>
             </motion.div>
           </div>
@@ -459,25 +415,6 @@ const AboutUsPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <Link
-                  href="/our-impact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-fuchsia-600 to-blue-600 text-white font-medium rounded-full hover:from-blue-600 hover:to-fuchsia-600 transition-all duration-300"
-                >
-                  See Our Impact
-                  <svg
-                    className="w-5 h-5 ml-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </Link>
               </div>
             </motion.div>
           </div>
@@ -546,15 +483,9 @@ const AboutUsPage: React.FC = () => {
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 href="/get-started"
-                className="px-8 py-4 bg-gradient-to-r from-fuchsia-600 to-blue-600 text-white font-medium rounded-full hover:from-blue-600 hover:to-fuchsia-600 transition-all duration-300"
-              >
-                Get Started
-              </Link>
-              <Link
-                href="/contact"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300"
               >
-                Schedule a Demo
+                Get Started
               </Link>
             </motion.div>
           </div>

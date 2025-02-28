@@ -173,11 +173,14 @@ const ForAmbassadorsPage = () => {
             Transform Your Influence Into Impact
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-gray-300 md:text-xl">
-            Join a community of elite creators turning passion into profession. Authentic partnerships, real rewards, unlimited potential.
+            Join a community of creators turning passion into profession. Authentic partnerships, real rewards, unlimited potential.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <Button size="lg" className="px-8 py-6 text-lg" asChild>
-              <Link href="/dashboard">
+              <Link
+                href="/dashboard"
+                className="px-8 py-4 bg-transparent border border-white/20 backdrop-blur-sm text-white font-medium rounded-full hover:bg-white/10 transition-all duration-300"
+              >
                 Apply Now
                 <ArrowRightIcon className="ml-2 h-5 w-5" />
               </Link>
