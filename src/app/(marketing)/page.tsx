@@ -1,6 +1,5 @@
 import { AnimationContainer, MaxWidthWrapper, PricingCards } from "@/components";
 import { BentoCard, BentoGrid, CARDS } from "@/components/ui/bento-grid";
-import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
 import { LampContainer } from "@/components/ui/lamp";
 import MagicBadge from "@/components/ui/magic-badge";
@@ -138,7 +137,7 @@ const HomePage = async () => {
                         Two ways to get started with Ambassy
                         </h2>
                         <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-                        Join forces with Ambassy to amplify your brand's presence through our network of passionate ambassadors.
+                        Join forces with Ambassy to amplify your brand&apos;s presence through our network of passionate ambassadors.
                         </p>
                     </div>
                 </AnimationContainer>

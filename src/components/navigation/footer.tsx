@@ -54,7 +54,7 @@ const Footer = () => {
                                 </h3>
                                 <ul className="mt-4 text-sm text-muted-foreground">
                                     <li className="">
-                                        <Link href="" className="hover:text-foreground transition-all duration-300">
+                                        <Link href="/aboutUs" className="hover:text-foreground transition-all duration-300">
                                             About Us
                                         </Link>
                                     </li>
@@ -81,52 +81,52 @@ const Footer = () => {
                                 <ul className="mt-4 grid grid-cols-5 gap-1">
                                     <li>
                                         <Link href="https://www.facebook.com/ambassyapp/" className="hover:text-foreground transition-all duration-300">
-                                            <img src="/assets/facebook.svg" alt="Facebook" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                            <Image src="/assets/facebook.svg" alt="Facebook" className="w-9 h-9 hover:opacity-80 transition-all duration-300" width={10}  height={10} />
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href="https://www.instagram.com/ambassy.io/" className="hover:text-foreground transition-all duration-300">
-                                            <img src="/assets/instagram.svg" alt="Instagram" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                            <Image src="/assets/instagram.svg" alt="Instagram" className="w-9 h-9 hover:opacity-80 transition-all duration-300" width={10}  height={10}/>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href="" className="hover:text-foreground transition-all duration-300">
-                                            <img src="/assets/x.svg" alt="Twitter" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                            <Image src="/assets/x.svg" alt="Twitter" className="w-9 h-9 hover:opacity-80 transition-all duration-300" width={10}  height={10}/>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
-                                            <img src="/assets/linkedin.svg" alt="LinkedIn" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                            <Image src="/assets/linkedin.svg" alt="LinkedIn" className="w-9 h-9 hover:opacity-80 transition-all duration-300" width={10}  height={10}/>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
-                                            <img src="/assets/snap.svg" alt="Snapchat" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                            <Image src="/assets/snap.svg" alt="Snapchat" className="w-9 h-9 hover:opacity-80 transition-all duration-300" width={10}  height={10}/>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
-                                            <img src="/assets/twitch.svg" alt="Twitch" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                            <Image src="/assets/twitch.svg" alt="Twitch" className="w-9 h-9 hover:opacity-80 transition-all duration-300" width={10}  height={10}/>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
-                                            <img src="/assets/telegram.svg" alt="Telegram" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                            <Image src="/assets/telegram.svg" alt="Telegram" className="w-9 h-9 hover:opacity-80 transition-all duration-300" width={10}  height={10}/>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
-                                            <img src="/assets/discord.svg" alt="Discord" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                            <Image src="/assets/discord.svg" alt="Discord" className="w-9 h-9 hover:opacity-80 transition-all duration-300" width={10}  height={10}/>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
-                                            <img src="/assets/tiktok.svg" alt="Discord" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                            <Image src="/assets/tiktok.svg" alt="Discord" className="w-9 h-9 hover:opacity-80 transition-all duration-300" width={10}  height={10}/>
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href="www.linkedin.com/in/ambassy-app-327303352" className="hover:text-foreground transition-all duration-300">
-                                            <img src="/assets/youtube.svg" alt="Discord" className="w-9 h-9 hover:opacity-80 transition-all duration-300" />
+                                            <Image src="/assets/youtube.svg" alt="Discord" className="w-9 h-9 hover:opacity-80 transition-all duration-300" width={10}  height={10}/>
                                         </Link>
                                     </li>
                                 </ul>

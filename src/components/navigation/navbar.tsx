@@ -129,12 +129,12 @@ const Navbar = () => {
                             
                             <div className="flex items-center gap-x-4">
                                 <Link
-                                    href="/auth/sign-in"
+                                    href="https://ambassy.pages.dev/login"
                                     className={buttonVariants({ size: "sm", variant: "ghost" })}
                                 >
                                     Sign In
                                 </Link>
-                                <Link href="/auth/sign-up" className={buttonVariants({ size: "sm" })}>
+                                <Link href="https://ambassy.pages.dev/register" className={buttonVariants({ size: "sm" })}>
                                     Get Started
                                     <ZapIcon className="size-3.5 ml-1.5 text-fuchsia-600 fill-fuchsia-500" />
                                 </Link>
