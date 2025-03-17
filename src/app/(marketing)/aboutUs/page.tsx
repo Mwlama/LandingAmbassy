@@ -88,51 +88,26 @@ const AboutUsPage: React.FC = () => {
   
   return (
     <div className="bg-black text-white">
-      {/* Hero Section with Parallax Effect */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <motion.div 
-          style={{ scale }}
-          className="absolute inset-0 z-0"
-        >
+        <motion.div style={{ scale }} className="absolute inset-0 z-0">
           <Vortex transparent={true} className="w-full h-full" />
         </motion.div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-            className="max-w-4xl mx-auto"
-          >
-            <motion.h1
-              variants={fadeInUp}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-white"
-            >
+        <div className="container mx-auto px-4 text-center relative z-20">
+          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl mx-auto">
+            <motion.h1 variants={fadeInUp} className="text-6xl font-bold mb-6 text-white">
               About Ambassy
             </motion.h1>
-            <motion.p
-              variants={fadeInUp}
-              className="text-xl sm:text-2xl text-gray-300 mb-8"
-            >
-              Transforming brand-creator relationships through innovation and authentic storytelling since 2018.
+            <motion.p variants={fadeInUp} className="text-xl text-gray-300 mb-8">
+              Transforming brand-creator relationships through innovation and authentic storytelling.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex justify-center gap-4">
               <Link
                 href="/get-started"
-                className="px-8 py-4 bg-transparent border border-white/20 backdrop-blur-sm text-white font-medium rounded-full hover:bg-white/10 transition-all duration-300"
+                className="px-8 py-4 bg-transparent border border-white/20 text-white font-medium rounded-full hover:bg-white/10 transition-all duration-300"
               >
                 Get Started
               </Link>
             </motion.div>
-          </motion.div>
-        </div>
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-          <motion.div 
-            animate={{ y: [0, 10, 0] }} 
-            transition={{ repeat: Infinity, duration: 1.5 }}
-          >
-            <svg className="w-8 h-8 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
           </motion.div>
         </div>
       </section>

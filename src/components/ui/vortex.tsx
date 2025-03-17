@@ -234,14 +234,22 @@ export const Vortex: React.FC<VortexProps> = ({
 
   useEffect(() => {
     setup();
-    window.addEventListener("resize", () => {
+    
+    const handleResize = () => {
       const canvas = canvasRef.current;
       const ctx = canvas?.getContext("2d");
       if (canvas && ctx) {
         resize(canvas, ctx);
       }
-    });
+    };
+  
+    window.addEventListener("resize", handleResize);
+  
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
+  
 
   return (
     <div className={cn("relative h-full w-full", containerClassName)}>
