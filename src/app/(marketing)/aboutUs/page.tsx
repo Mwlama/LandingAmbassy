@@ -3,13 +3,17 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Lottie from "lottie-react";
-import missionAnimation from "@/components/lottie/anim5.json";
-import teamAnimation from "@/components/lottie/anim1.json";
-import impactAnimation from "@/components/lottie/anim4.json";
+import dynamic from 'next/dynamic';
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { LampContainer } from "@/components/ui/lamp";
+
+// Dynamically import Lottie with SSR disabled
+const Lottie = dynamic(() => import('lottie-react'), {
+  ssr: false
+});
+
+
 
 // Animation variants
 const fadeInUp = {
@@ -77,7 +81,7 @@ const timeline = [
   { year: "2027", title: "Industry Innovation", description: "We're planning to tokenize the creator economy, empowering influencers to monetize their digital presence." },
 ];
 
-const AboutUsPage: React.FC = () => {
+const AboutUsPage = () => {
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -86,12 +90,31 @@ const AboutUsPage: React.FC = () => {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Client-side operations
-    }
-  }, []);
+  // Loading state for animations
+  const [animationsLoaded, setAnimationsLoaded] = useState(false);
+  const [missionAnim, setMissionAnim] = useState<any>(null);
+  const [teamAnim, setTeamAnim] = useState<any>(null);
+  const [impactAnim, setImpactAnim] = useState<any>(null);
 
+  useEffect(() => {
+    // Load animations only on the client side
+    const loadAnimations = async () => {
+      try {
+        const missionAnimation = await import("@/components/lottie/anim5.json");
+        const teamAnimation = await import("@/components/lottie/anim1.json");
+        const impactAnimation = await import("@/components/lottie/anim4.json");
+        
+        setMissionAnim(missionAnimation.default || missionAnimation);
+        setTeamAnim(teamAnimation.default || teamAnimation);
+        setImpactAnim(impactAnimation.default || impactAnimation);
+        setAnimationsLoaded(true);
+      } catch (error) {
+        console.error("Failed to load animations:", error);
+      }
+    };
+    
+    loadAnimations();
+  }, []);
 
   return (
     <div className="bg-black text-white">
@@ -159,7 +182,9 @@ const AboutUsPage: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <motion.div variants={fadeInLeft} className="flex-1">
-              <Lottie animationData={missionAnimation} className="max-w-md mx-auto md:mx-0" />
+              {animationsLoaded && missionAnim && (
+                <Lottie animationData={missionAnim} className="max-w-md mx-auto md:mx-0" />
+              )}
             </motion.div>
             <motion.div variants={fadeInRight} className="flex-1">
               <div className="max-w-xl">
@@ -253,7 +278,9 @@ const AboutUsPage: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row-reverse items-center gap-12">
             <motion.div variants={fadeInLeft} className="flex-1">
-              <Lottie animationData={teamAnimation} className="max-w-md mx-auto md:mx-0" />
+              {animationsLoaded && teamAnim && (
+                <Lottie animationData={teamAnim} className="max-w-md mx-auto md:mx-0" />
+              )}
             </motion.div>
             <motion.div variants={fadeInRight} className="flex-1">
               <div className="max-w-xl">
@@ -342,7 +369,9 @@ const AboutUsPage: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <motion.div variants={fadeInLeft} className="flex-1">
-              <Lottie animationData={impactAnimation} className="max-w-md mx-auto md:mx-0" />
+              {animationsLoaded && impactAnim && (
+                <Lottie animationData={impactAnim} className="max-w-md mx-auto md:mx-0" />
+              )}
             </motion.div>
             <motion.div variants={fadeInRight} className="flex-1">
               <div className="max-w-xl">
