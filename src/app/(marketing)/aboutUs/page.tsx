@@ -10,6 +10,7 @@ import teamAnimation from "@/components/lottie/anim1.json";
 import impactAnimation from "@/components/lottie/anim4.json";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import { LampContainer } from "@/components/ui/lamp";
 
 // Animation variants
 const fadeInUp = {
@@ -89,9 +90,8 @@ const AboutUsPage: React.FC = () => {
   return (
     <div className="bg-black text-white">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <motion.div style={{ scale }} className="absolute inset-0 z-0">
-          <Vortex transparent={true} className="w-full h-full" />
-        </motion.div>
+        <LampContainer>
+        
         <div className="container mx-auto px-4 text-center relative z-20">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl mx-auto">
             <motion.h1 variants={fadeInUp} className="text-6xl font-bold mb-6 text-white">
@@ -110,6 +110,7 @@ const AboutUsPage: React.FC = () => {
             </motion.div>
           </motion.div>
         </div>
+        </LampContainer>
       </section>
 
       {/* Stats Section */}
