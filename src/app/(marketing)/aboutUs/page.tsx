@@ -86,29 +86,35 @@ const AboutUsPage: React.FC = () => {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
+  useEffect(() => {
+    // Ensure any DOM manipulation or browser-specific code is only executed on the client side
+    if (typeof window !== 'undefined') {
+      // Client-side code here
+    }
+  }, []);
+
   return (
     <div className="bg-black text-white">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <LampContainer>
-        
-        <div className="container mx-auto px-4 text-center relative z-20">
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl mx-auto">
-            <motion.h1 variants={fadeInUp} className="text-6xl font-bold mb-6 text-white">
-              About Ambassy
-            </motion.h1>
-            <motion.p variants={fadeInUp} className="text-xl text-gray-300 mb-8">
-              Transforming brand-creator relationships through innovation and authentic storytelling.
-            </motion.p>
-            <motion.div variants={fadeInUp} className="flex justify-center gap-4">
-              <Link
-                href="/get-started"
-                className="px-8 py-4 bg-transparent border border-white/20 text-white font-medium rounded-full hover:bg-white/10 transition-all duration-300"
-              >
-                Get Started
-              </Link>
+          <div className="container mx-auto px-4 text-center relative z-20">
+            <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl mx-auto">
+              <motion.h1 variants={fadeInUp} className="text-6xl font-bold mb-6 text-white">
+                About Ambassy
+              </motion.h1>
+              <motion.p variants={fadeInUp} className="text-xl text-gray-300 mb-8">
+                Transforming brand-creator relationships through innovation and authentic storytelling.
+              </motion.p>
+              <motion.div variants={fadeInUp} className="flex justify-center gap-4">
+                <Link
+                  href="/get-started"
+                  className="px-8 py-4 bg-transparent border border-white/20 text-white font-medium rounded-full hover:bg-white/10 transition-all duration-300"
+                >
+                  Get Started
+                </Link>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        </div>
+          </div>
         </LampContainer>
       </section>
 
