@@ -87,11 +87,11 @@ const AboutUsPage: React.FC = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
   useEffect(() => {
-    // Ensure any DOM manipulation or browser-specific code is only executed on the client side
     if (typeof window !== 'undefined') {
-      // Client-side code here
+      // Client-side operations
     }
   }, []);
+
 
   return (
     <div className="bg-black text-white">
