@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import { ArrowRightIcon, CheckCircle, TrendingUp, DollarSign, Users, Globe, Zap, Shield, BarChart, MessageCircle, Settings, Video, Rocket, Target, PieChart, Headphones, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Vortex } from "@/components/ui/vortex";
 
 // Animation variants
 const fadeInUp = {
@@ -136,34 +137,35 @@ const VIPPlanPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <LampContainer>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="mx-auto flex max-w-5xl flex-col items-center justify-center px-4 text-center"
-        >
-          <MagicBadge title="VIP Plan" />
-          <h1 className="mt-16 bg-gradient-to-b from-white to-gray-400 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
-            The Ultimate Marketing Suite
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg text-gray-300 md:text-xl">
-            For just <span className="font-bold text-white">$299.99/month</span>, unlock exclusive tools like TikTok Ads, Google Ads, and a dedicated account manager.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="px-8 py-6 text-lg" asChild>
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <Vortex className="w-full h-full" />
+            {/* Ensure the Vortex component fills the entire background */}
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="mx-auto flex max-w-5xl flex-col items-center justify-center px-4 text-center relative z-10"
+          >
+            <MagicBadge title="VIP Plan" />
+            <h1 className="mt-13 bg-gradient-to-b from-white to-gray-400 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
+              The Ultimate Marketing Suite
+            </h1>
+            <p className="mt-4 max-w-2xl text-lg text-gray-300 md:text-xl">
+              For just <span className="font-bold text-white">$299.99/month</span>, unlock exclusive tools like TikTok Ads, Google Ads, and a dedicated account manager.
+            </p>
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
-                href="/dashboard"
-                className="px-8 py-4 bg-transparent border border-white/20 backdrop-blur-sm text-white font-medium rounded-full hover:bg-white/10 transition-all duration-300"
+                href="/get-started"
+                className="mt-4 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300"
               >
                 Get Started
-                <ArrowRightIcon className="ml-2 h-5 w-5" />
               </Link>
-            </Button>
-          </div>
-          <p className="mt-4 text-sm text-gray-400">No commitments. Cancel anytime.</p>
-        </motion.div>
-      </LampContainer>
+            </motion.div>
+            <p className="mt-4 text-sm text-gray-400">No commitments. Cancel anytime.</p>
+          </motion.div>
+        </section>
 
       <MaxWidthWrapper className="py-20">
         {/* Key Advantages Section */}

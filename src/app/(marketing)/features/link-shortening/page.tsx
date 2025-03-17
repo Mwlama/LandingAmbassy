@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { LampContainer } from "@/components/ui/lamp";
 import MagicBadge from "@/components/ui/magic-badge";
 import MagicAmbassador from "@/components/ui/MagicAmbassador";
+import { Vortex } from "@/components/ui/vortex";
 import VideoBanner from "@/components/VideoBanner";
 import { COMPANIES } from "@/utils";
 import { motion } from "framer-motion";
@@ -161,33 +162,35 @@ const ForAmbassadorsPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <LampContainer>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="mx-auto flex max-w-5xl flex-col items-center justify-center px-4 text-center"
-        >
-          <MagicBadge title="For Ambassadors" />
-          <h1 className="mt-16 bg-gradient-to-b from-white to-gray-400 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
-            Transform Your Influence Into Impact
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg text-gray-300 md:text-xl">
-            Join a community of creators turning passion into profession. Authentic partnerships, real rewards, unlimited potential.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="px-8 py-6 text-lg" asChild>
-              <Link
-                href="/dashboard"
-                className="px-8 py-4 bg-transparent border border-white/20 backdrop-blur-sm text-white font-medium rounded-full hover:bg-white/10 transition-all duration-300"
-              >
-                Apply Now
-                <ArrowRightIcon className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </motion.div>
-      </LampContainer>
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                  <Vortex className="w-full h-full" />
+                  {/* Ensure the Vortex component fills the entire background */}
+                </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1 }}
+                  className="mx-auto flex max-w-5xl flex-col items-center justify-center px-4 text-center relative z-10"
+                >
+                  <MagicBadge title="Ambassador" />
+                  <h1 className="mt-13 bg-gradient-to-b from-white to-gray-400 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
+                  Transform Your Influence Into Impact
+                  </h1>
+                  <p className="mt-4 max-w-2xl text-lg text-gray-300 md:text-xl">
+                  Join a community of creators turning passion into profession. Authentic partnerships, real rewards, unlimited potential.
+                  </p>
+                  <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center gap-4">
+                    <Link
+                      href="/get-started"
+                      className="mt-4 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300"
+                    >
+                      Get Started
+                    </Link>
+                  </motion.div>
+                  <p className="mt-4 text-sm text-gray-400">No commitments. Cancel anytime.</p>
+                </motion.div>
+              </section>
 
       <MaxWidthWrapper className="py-20">
         {/* Key Advantages Section */}

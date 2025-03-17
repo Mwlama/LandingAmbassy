@@ -7,6 +7,10 @@ import dynamic from 'next/dynamic';
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { LampContainer } from "@/components/ui/lamp";
+import { Button } from "@/components/ui/button";
+import { ArrowRightIcon } from "lucide-react";
+import MagicBadge from "@/components/ui/magic-badge";
+import { Vortex } from "@/components/ui/vortex";
 
 // Dynamically import Lottie with SSR disabled
 const Lottie = dynamic(() => import('lottie-react'), {
@@ -118,28 +122,44 @@ const AboutUsPage = () => {
 
   return (
     <div className="bg-black text-white">
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <LampContainer>
-          <div className="container mx-auto px-4 text-center relative z-20">
-            <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl mx-auto">
-              <motion.h1 variants={fadeInUp} className="text-6xl font-bold mb-6 text-white">
-                About Ambassy
-              </motion.h1>
-              <motion.p variants={fadeInUp} className="text-xl text-gray-300 mb-8">
-                Transforming brand-creator relationships through innovation and authentic storytelling.
-              </motion.p>
-              <motion.div variants={fadeInUp} className="flex justify-center gap-4">
-                <Link
-                  href="/get-started"
-                  className="px-8 py-4 bg-transparent border border-white/20 text-white font-medium rounded-full hover:bg-white/10 transition-all duration-300"
-                >
-                  Get Started
-                </Link>
-              </motion.div>
+
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={staggerContainer}
+        className="py-24 bg-gradient-to-br from-fuchsia-900/20 to-blue-900/20 relative overflow-hidden"
+      >
+        <div className="absolute inset-0 z-0">
+          <Vortex className="w-full h-full" />
+          {/* Ensure the Vortex component fills the entire background */}
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h2
+              variants={fadeInUp}
+              className="text-4xl sm:text-5xl font-bold mb-6"
+            >
+              About Ambassy
+            </motion.h2>
+            <motion.p
+              variants={fadeInUp}
+              className="text-xl text-gray-300 mb-8"
+            >
+              Transforming brand-creator relationships through innovation and authentic storytelling.
+            </motion.p>
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link
+                href="/get-started"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300"
+              >
+                Get Started
+              </Link>
             </motion.div>
           </div>
-        </LampContainer>
-      </section>
+        </div>
+      </motion.section>
+
 
       {/* Stats Section */}
       <section className="py-16 bg-gradient-to-b from-black via-fuchsia-900 to-black">
