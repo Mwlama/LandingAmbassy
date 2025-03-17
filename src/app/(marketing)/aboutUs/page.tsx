@@ -3,7 +3,6 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Vortex } from "@/components/ui/vortex";
 import Lottie from "lottie-react";
 import missionAnimation from "@/components/lottie/anim5.json";
 import teamAnimation from "@/components/lottie/anim1.json";
@@ -441,7 +440,6 @@ const AboutUsPage: React.FC = () => {
         className="py-24 bg-gradient-to-br from-fuchsia-900/20 to-blue-900/20 relative overflow-hidden"
       >
         <div className="absolute inset-0 z-0">
-          <Vortex transparent={true} className="w-full h-full opacity-40" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
