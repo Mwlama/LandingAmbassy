@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react"; // Import useState
+import { useState } from "react";
 import { AnimationContainer, MaxWidthWrapper } from "@/components";
 import { Button } from "@/components/ui/button";
 import { LampContainer } from "@/components/ui/lamp";
@@ -125,8 +125,9 @@ const faqItems = [
   }
 ];
 
-const LinkShorteningPage = () => {
+const ProPlanPage = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<"features" | "benefits">("features");
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
@@ -147,7 +148,7 @@ const LinkShorteningPage = () => {
             Scale Your Brand with Advanced Tools
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-gray-300 md:text-xl">
-            For just $39.99/month, unlock exclusive features like advanced analytics, AI chatbots, and unlimited influencer outreach.
+            For just <span className="font-bold text-white">$39.99/month</span>, unlock exclusive features like advanced analytics, AI chatbots, and unlimited influencer outreach.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <Button size="lg" className="px-8 py-6 text-lg" asChild>
@@ -160,6 +161,7 @@ const LinkShorteningPage = () => {
               </Link>
             </Button>
           </div>
+          <p className="mt-4 text-sm text-gray-400">No commitments. Cancel anytime.</p>
         </motion.div>
       </LampContainer>
 
@@ -174,8 +176,25 @@ const LinkShorteningPage = () => {
             </p>
           </div>
 
+          {/* Toggle Between Features and Benefits */}
+          <div className="flex justify-center gap-4 mb-8">
+            <Button
+              variant={activeTab === "features" ? "primary" : "outline"}
+              onClick={() => setActiveTab("features")}
+            >
+              Features
+            </Button>
+            <Button
+              variant={activeTab === "benefits" ? "primary" : "outline"}
+              onClick={() => setActiveTab("benefits")}
+            >
+              Benefits
+            </Button>
+          </div>
+
+          {/* Features/Benefits Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {proBenefits.slice(0, 3).map((benefit, index) => (
+            {(activeTab === "features" ? proBenefits.slice(0, 3) : proBenefits.slice(3, 6)).map((benefit, index) => (
               <div key={index} className="bg-black/40 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center mb-6">
                   {benefit.icon}
@@ -341,4 +360,4 @@ const LinkShorteningPage = () => {
   );
 };
 
-export default LinkShorteningPage;
+export default ProPlanPage;
