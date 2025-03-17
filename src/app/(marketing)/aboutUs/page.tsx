@@ -47,25 +47,25 @@ const companyStats = [
 
 // Core values
 const coreValues = [
-  { 
-    title: "Authenticity", 
+  {
+    title: "Authenticity",
     description: "We believe in genuine connections that resonate with audiences.",
-    icon: "✦" 
+    icon: "✦"
   },
-  { 
-    title: "Innovation", 
+  {
+    title: "Innovation",
     description: "We constantly push boundaries to deliver cutting-edge solutions.",
-    icon: "◈" 
+    icon: "◈"
   },
-  { 
-    title: "Collaboration", 
+  {
+    title: "Collaboration",
     description: "We foster partnerships based on mutual growth and respect.",
-    icon: "⬡" 
+    icon: "⬡"
   },
-  { 
-    title: "Excellence", 
+  {
+    title: "Excellence",
     description: "We strive for exceptional quality in everything we do.",
-    icon: "⬢" 
+    icon: "⬢"
   },
 ];
 
@@ -82,10 +82,10 @@ const AboutUsPage: React.FC = () => {
     triggerOnce: false,
     threshold: 0.1,
   });
-  
+
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
-  
+
   return (
     <div className="bg-black text-white">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -114,7 +114,7 @@ const AboutUsPage: React.FC = () => {
 
       {/* Stats Section */}
       <section className="py-16 bg-gradient-to-b from-black via-fuchsia-900 to-black">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
             initial="hidden"
@@ -211,7 +211,7 @@ const AboutUsPage: React.FC = () => {
               The principles that guide everything we do at Ambassy
             </motion.p>
           </motion.div>
-          
+
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -295,7 +295,7 @@ const AboutUsPage: React.FC = () => {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Our Journey</h2>
             <p className="text-xl text-gray-300">Milestones that shaped who we are today</p>
           </motion.div>
-          
+
           <div className="max-w-4xl mx-auto">
             {timeline.map((item, index) => (
               <motion.div
@@ -345,7 +345,8 @@ const AboutUsPage: React.FC = () => {
                   Our Impact
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                We&apos;re revolutionizing digital marketing by connecting brands and creators worldwide. For E-commerce Pros, we&apos;ve empowered thousands of businesses to skyrocket their online presence and sales, delivering exceptional ROI. For Ambassadors, we&apos;ve launched careers and helped passionate individuals build thriving personal brands, reaching millions of engaged followers. Together, we&apos;re shaping the future of digital marketing, transforming the way brands and creators collaborate to achieve unprecedented growth and engagement.                </p>
+                  We&apos;re revolutionizing digital marketing by connecting brands and creators worldwide. For E-commerce Pros, we&apos;ve empowered thousands of businesses to skyrocket their online presence and sales, delivering exceptional ROI. For Ambassadors, we&apos;ve launched careers and helped passionate individuals build thriving personal brands, reaching millions of engaged followers. Together, we&apos;re shaping the future of digital marketing, transforming the way brands and creators collaborate to achieve unprecedented growth and engagement.
+                </p>
                 <div className="space-y-6 mb-8">
                   <div className="space-y-2">
                     <div className="flex justify-between">
@@ -353,7 +354,7 @@ const AboutUsPage: React.FC = () => {
                       <span className="text-fuchsia-400">+185%</span>
                     </div>
                     <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
-                      <motion.div 
+                      <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: "85%" }}
                         transition={{ duration: 1, delay: 0.2 }}
@@ -367,7 +368,7 @@ const AboutUsPage: React.FC = () => {
                       <span className="text-blue-400">+210%</span>
                     </div>
                     <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
-                      <motion.div 
+                      <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: "92%" }}
                         transition={{ duration: 1, delay: 0.4 }}
@@ -381,7 +382,7 @@ const AboutUsPage: React.FC = () => {
                       <span className="text-fuchsia-400">+140%</span>
                     </div>
                     <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
-                      <motion.div 
+                      <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: "75%" }}
                         transition={{ duration: 1, delay: 0.6 }}
@@ -409,7 +410,7 @@ const AboutUsPage: React.FC = () => {
             <h2 className="text-2xl font-semibold mb-2">Trusted By Industry Leaders</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-fuchsia-500 to-blue-500 mx-auto"></div>
           </motion.div>
-          
+
           <motion.div
             initial="hidden"
             whileInView="visible"
