@@ -2,7 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, Zap, TrendingUp, Users, Globe, DollarSign, Award, Rocket } from 'lucide-react';
+import { Star, Zap, TrendingUp, Users, Globe, DollarSign, Award, Rocket, Link } from 'lucide-react';
+import { AnimationContainer } from '@/components';
+import MagicBadge from '@/components/ui/magic-badge';
 
 interface BenefitCardProps {
   icon: React.ElementType;
@@ -20,6 +22,11 @@ const BenefitCard: React.FC<BenefitCardProps> = ({ icon: Icon, title, descriptio
     <p className="text-muted-foreground">{description}</p>
   </motion.div>
 );
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const BenefitsPage: React.FC = () => {
   const proBenefits = [
@@ -69,19 +76,21 @@ const BenefitsPage: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center py-20 px-4 bg-gradient-to-b from-background to-background/50">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="w-full max-w-6xl"
-      >
-        <h1 className="text-4xl md:text-6xl font-bold text-center mb-6 bg-clip-text text-white dark:text-black">
-          Unlock Your Potential
-        </h1>
-        <p className="text-lg md:text-xl text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          Discover the amazing benefits our app offers to both Pro users and Ambassadors.
-        </p>
+    
+
+    <div className="overflow-x-hidden scrollbar-hide size-full">
+      <AnimationContainer delay={0.1}>
+                <div className="flex flex-col items-center justify-center py-10 max-w-lg mx-auto">
+                    <MagicBadge title="Benefits" />
+                    <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold font-heading text-center mt-6 !leading-tight">
+                      Unlock Your Potential
+                    </h1>
+                    <p className="text-base md:text-lg mt-6 text-center text-muted-foreground">
+                      Discover the amazing benefits our app offers to both Pro users and Ambassadors.
+                    </p>
+                </div>
+            </AnimationContainer>
+      
         
         <h2 className="text-3xl font-semibold text-center mb-8">Pro User Benefits</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -98,20 +107,23 @@ const BenefitsPage: React.FC = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-          <motion.div 
-            whileHover={{ scale: 1.05 }}
-            className="bg-purple-600 text-text-transparent bg-gradient-to-r from-fuchsia-600 to-blue-600 px-8 py-4 rounded-full font-semibold text-lg cursor-pointer"
-          >
-            Become a Pro
-          </motion.div>
-          <motion.div 
-            whileHover={{ scale: 1.05 }}
-            className="bg-pink-600 text-text-transparent bg-gradient-to-r from-blue-600 to-fuchsia-600 px-8 py-4 rounded-full font-semibold text-lg cursor-pointer"
-          >
-            Ambassador
-          </motion.div>
+        <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center gap-4">
+                    <Link
+                      href="/get-started"
+                      className="mt-4 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300"
+                    >
+                      Become a Pro
+                    </Link>
+                  </motion.div>
+                  <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center gap-4">
+                    <Link
+                      href="/get-started"
+                      className="mt-4 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300"
+                    >
+                      Ambassador
+                    </Link>
+                  </motion.div>
         </div>
-      </motion.div>
     </div>
   );
 };

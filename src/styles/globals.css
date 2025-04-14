@@ -82,7 +82,7 @@ html, body {
 }
 
 .dumy {
-  color: hsl(0 0% 98%);
+  color: hsl(0, 0%, 98%);
   color: rgb(38, 38, 38)
     /* @apply to-purple-500 */
 }

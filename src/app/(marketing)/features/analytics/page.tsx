@@ -136,6 +136,39 @@ const VIPPlanPage = () => {
 
   return (
     <>
+    <div className="overflow-x-hidden scrollbar-hide size-full">
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-transparent">
+
+          <Vortex containerClassName="absolute inset-0 z-0" className="w-full h-full" transparent />
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="mx-auto flex max-w-5xl flex-col items-center justify-center px-4 text-center relative z-10"
+          >
+            <AnimationContainer delay={0.1}>
+            <MagicBadge title="PRO Plan" />
+            <h1 className="text-2xl md:text-4xl lg:text-7xl font-semibold font-heading text-center mt-0 !leading-tight">
+            The Ultimate Marketing Suite
+            </h1>
+            <p className="text-base md:text-lg mt-6 text-center text-muted-foreground">
+              For just <span className="font-bold text-fuchsia-500">$299.99/month</span>, unlock exclusive assistance like TikTok Ads & Shop, Google Ads, Meta Ads and the ultimate support of a dedicated account manager to elevate your brand’s success!.
+            </p>
+            </AnimationContainer>
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link
+                href="/get-started"
+                className="mt-4 px-8 py-4 bg-fuchsia-500/50 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-neutral-500/30 transition-all duration-300"
+              >
+                Get Started
+              </Link>
+            </motion.div>
+            <p className="mt-4 text-sm text-gray-400">No commitments. Cancel anytime.</p>
+          </motion.div>
+          
+        </section>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -358,7 +391,9 @@ const VIPPlanPage = () => {
           </AnimationContainer>
         </MaxWidthWrapper>
       </section>
+    </div>
     </>
+    
   );
 };
 

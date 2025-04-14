@@ -6,7 +6,7 @@ export const NAV_LINKS = [
         href: "/aboutUs",
     },
     {
-        title: "How It Works",
+        title: "Explore",
         href: "/features",
         menu: [
             {
@@ -28,7 +28,7 @@ export const NAV_LINKS = [
                 icon: LineChartIcon,
             },
             {
-                title: "For All",
+                title: "Blog",
                 tagline: "We share the Best with you.",
                 href: "/features/qr-codes",
                 icon: QrCodeIcon,
