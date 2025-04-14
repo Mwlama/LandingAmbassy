@@ -22,7 +22,7 @@ export const CARDS = [
             <Card className="absolute top-10 left-10 origin-top rounded-none rounded-tl-md transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_0%,#000_100%)] group-hover:scale-105 border border-border border-r-0">
                 <CardHeader>
                     <CardTitle>
-                        Generate Affilate links
+                        Get Started
                     </CardTitle>
                     <CardDescription>
                         Send the procedure and affiliate links to the Ambassador
@@ -43,7 +43,7 @@ export const CARDS = [
     },
     {
         Icon: SearchIcon,
-        name: "Manage your Army of Ambassadors",
+        name: "Launch a campaign, empower ambassadors, and let your product spread like wildfire!",
         description: "Quickly find, share and discuss with your Army of Ambassadors.",
         href: "#",
         cta: "Learn more",
@@ -64,7 +64,7 @@ export const CARDS = [
     },
     {
         Icon: WaypointsIcon,
-        name: "Connect your apps and share",
+        name: "Manage your Army of Ambassadors",
         description: "Integrate with your favorite apps, niche and location.",
         href: "#",
         cta: "Learn more",

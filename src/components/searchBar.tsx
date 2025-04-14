@@ -67,7 +67,7 @@ const HeroSection: React.FC = () => {
                     onClick={handleSearch}
                     disabled={isLoading || !searchQuery.trim()}
                     className="px-6 sm:px-8 py-3 sm:py-4 rounded-full text-white font-medium transition-all duration-300 mr-2
-                      bg-gradient-to-r from-fuchsia-600 to-blue-600 hover:from-blue-600 hover:to-fuchsia-600
+                      inline-flex items-center bg-gray-500/50 backdrop-blur-sm border border-fuchsia-500 text-white font-medium rounded-full hover:bg-neutral-500/30 transition-all duration-300
                       disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isLoading ? (
@@ -87,7 +87,7 @@ const HeroSection: React.FC = () => {
 
               {/* Stats Section for Mobile and Tablet */}
               {showStats && (
-                <div className="mt-4 md:mt-6">
+                <div className="mt-4 md:mt-2 lg:hidden">
                   <div className="w-full p-4 sm:p-6 space-y-4 sm:space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                       {/* Ambassador Cards */}
@@ -127,6 +127,42 @@ const HeroSection: React.FC = () => {
                           Berlin, Germany
                         </p>
                       </div>
+                      <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
+                        <Image
+                          src="/ambassador4.jpg"
+                          alt="Ambassadors"
+                          width={200}
+                          height={200}
+                          className="w-full h-24 sm:h-32 object-cover rounded-lg"
+                        />
+                        <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
+                          Tokyo, Japan
+                        </p>
+                      </div>
+                      <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
+                        <Image
+                          src="/ambassador5.jpg"
+                          alt="Reach Potential"
+                          width={200}
+                          height={200}
+                          className="w-full h-24 sm:h-32 object-cover rounded-lg"
+                        />
+                        <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
+                          Sydney, Australia
+                        </p>
+                      </div>
+                      <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
+                        <Image
+                          src="/ambassador6.jpg"
+                          alt="Brands Promoted"
+                          width={200}
+                          height={200}
+                          className="w-full h-24 sm:h-32 object-cover rounded-lg"
+                        />
+                        <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
+                          Paris, France
+                        </p>
+                      </div>
                     </div>
                     <div className="relative mt-2">
                       <div className="absolute inset-0 flex items-center justify-center p-2 pointer-events-none">
@@ -147,16 +183,16 @@ const HeroSection: React.FC = () => {
             <div
               className={`absolute inset-0 z-0 w-full h-full transition-all duration-500 ${
                 showStats ? "scale-75" : "scale-100"
-              } hidden md:hidden lg:block`}
+              } hidden lg:block`}
             >
               <MemoizedGridGlobe />
             </div>
 
-            {/* Stats Section for Desktop */}
+            {/* Overlay Search Results on Globe */}
             {showStats && (
-              <div className="hidden lg:flex absolute inset-0 items-center justify-center z-10 h-full">
-                <div className="w-full max-w-2xl p-4 sm:p-6 space-y-4 sm:space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-4">
+              <div className="absolute inset-0 z-10 flex items-center justify-center h-full">
+                <div className="w-full max-w-4xl p-4 sm:p-6 space-y-4 sm:space-y-6 bg-transparent rounded-xl backdrop-blur-sm border border-transparent">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {/* Ambassador Cards */}
                     <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
                       <Image
@@ -192,6 +228,42 @@ const HeroSection: React.FC = () => {
                       />
                       <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
                         Berlin, Germany
+                      </p>
+                    </div>
+                    <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
+                      <Image
+                        src="/ambassador4.jpg"
+                        alt="Ambassadors"
+                        width={200}
+                        height={200}
+                        className="w-full h-24 sm:h-32 object-cover rounded-lg"
+                      />
+                      <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
+                        Tokyo, Japan
+                      </p>
+                    </div>
+                    <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
+                      <Image
+                        src="/ambassador5.jpg"
+                        alt="Reach Potential"
+                        width={200}
+                        height={200}
+                        className="w-full h-24 sm:h-32 object-cover rounded-lg"
+                      />
+                      <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
+                        Sydney, Australia
+                      </p>
+                    </div>
+                    <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
+                      <Image
+                        src="/ambassador6.jpg"
+                        alt="Brands Promoted"
+                        width={200}
+                        height={200}
+                        className="w-full h-24 sm:h-32 object-cover rounded-lg"
+                      />
+                      <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
+                        Paris, France
                       </p>
                     </div>
                   </div>

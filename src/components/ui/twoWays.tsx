@@ -51,7 +51,7 @@ const TwoWays = () => {
                 </p>
                 <Link
                   href={link.link}
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-fuchsia-600 to-blue-600 text-white font-medium rounded-full hover:from-blue-600 hover:to-fuchsia-600 transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 bg-gray-500/50 backdrop-blur-sm border border-white/30 text-white font-medium rounded-full hover:bg-neutral-500/30 transition-all duration-300"
                 >
                   Learn More
                   <svg
