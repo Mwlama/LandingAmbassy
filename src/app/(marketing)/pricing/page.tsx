@@ -1,3 +1,5 @@
+"use client";
+
 import { AnimationContainer, MaxWidthWrapper, PricingCards } from "@/components";
 import {
     Accordion,
@@ -5,23 +7,36 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
+import React, { useState, useEffect } from "react";
 import MagicBadge from "@/components/ui/magic-badge";
+import { Vortex } from "@/components/ui/vortex";
 import { FAQ } from "@/utils/constants/faq";
+import { motion } from "framer-motion";
 
 const PricingPage = () => {
     return (
-        <MaxWidthWrapper className="mb-40">
-            <AnimationContainer delay={0.1}>
-                <div className="flex flex-col items-center justify-center py-10 max-w-lg mx-auto">
-                    <MagicBadge title="Pricing" />
-                    <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold font-heading text-center mt-6 !leading-tight">
-                        Simple and transparent pricing
-                    </h1>
-                    <p className="text-base md:text-lg mt-6 text-center text-muted-foreground">
-                        Choose a plan that works for you. No hidden fees. No surprises.
-                    </p>
-                </div>
-            </AnimationContainer>
+            <div className="overflow-x-hidden scrollbar-hide size-full">
+                {/* Hero Section */}
+                <section className="relative flex items-center justify-center overflow-hidden bg-transparent">
+                  <Vortex containerClassName="absolute inset-0 z-0" className="w-full h-full" transparent />
+              
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="mx-auto flex max-w-5xl flex-col items-center justify-center px-4 text-center relative z-10"
+                  >
+                    <AnimationContainer delay={0.1}>
+                      <MagicBadge title="Pricing" />
+                      <h1 className="text-2xl md:text-4xl lg:text-7xl font-semibold font-heading text-center mt-0 !leading-tight">
+                      Simple & Transparent pricing                      </h1>
+                      <p className="text-base md:text-lg mt-3 text-center text-muted-foreground">
+                      Choose a plan that works for you. No hidden fees. No surprises.
+                      </p>
+                    </AnimationContainer>
+                  </motion.div>
+                </section>
+            <MaxWidthWrapper className="mb-40">
 
             <AnimationContainer delay={0.2}>
                 <PricingCards />
@@ -51,6 +66,7 @@ const PricingPage = () => {
             </AnimationContainer>
 
         </MaxWidthWrapper>
+        </div>
     )
 };
 

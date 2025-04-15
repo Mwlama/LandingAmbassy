@@ -164,7 +164,7 @@ const ForAmbassadorsPage = () => {
     <>
     <div className="overflow-x-hidden scrollbar-hide size-full">
           {/* Hero Section */}
-          <section className="relative h-screen flex items-center justify-center overflow-hidden bg-transparent">
+          <section className="relative flex items-center justify-center overflow-hidden bg-transparent">
     
               <Vortex containerClassName="absolute inset-0 z-0" className="w-full h-full" transparent />
     
@@ -175,7 +175,7 @@ const ForAmbassadorsPage = () => {
                 className="mx-auto flex max-w-5xl flex-col items-center justify-center px-4 text-center relative z-10"
               >
                 <AnimationContainer delay={0.1}>
-                <MagicBadge title="PRO Plan" />
+                <MagicBadge title="Ambassador" />
                 <h1 className="text-2xl md:text-4xl lg:text-7xl font-semibold font-heading text-center mt-0 !leading-tight">
                 Transform Your Influence Into Impact                </h1>
                 <p className="text-base md:text-lg mt-6 text-center text-muted-foreground">

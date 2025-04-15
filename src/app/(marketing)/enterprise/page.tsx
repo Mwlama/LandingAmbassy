@@ -3,8 +3,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Zap, TrendingUp, Users, Globe, DollarSign, Award, Rocket, Link } from 'lucide-react';
-import { AnimationContainer } from '@/components';
+import { AnimationContainer, MaxWidthWrapper } from '@/components';
 import MagicBadge from '@/components/ui/magic-badge';
+import { Vortex } from '@/components/ui/vortex';
 
 interface BenefitCardProps {
   icon: React.ElementType;
@@ -76,22 +77,29 @@ const BenefitsPage: React.FC = () => {
   ];
 
   return (
-    
-
-    <div className="overflow-x-hidden scrollbar-hide size-full">
-      <AnimationContainer delay={0.1}>
-                <div className="flex flex-col items-center justify-center py-10 max-w-lg mx-auto">
-                    <MagicBadge title="Benefits" />
-                    <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold font-heading text-center mt-6 !leading-tight">
-                      Unlock Your Potential
-                    </h1>
-                    <p className="text-base md:text-lg mt-6 text-center text-muted-foreground">
-                      Discover the amazing benefits our app offers to both Pro users and Ambassadors.
-                    </p>
-                </div>
-            </AnimationContainer>
-      
-        
+        <div className="overflow-x-hidden scrollbar-hide size-full">
+                        {/* Hero Section */}
+                        <section className="relative flex items-center justify-center overflow-hidden bg-transparent">
+                          <Vortex containerClassName="absolute inset-0 z-0" className="w-full h-full" transparent />
+                      
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}
+                            className="mx-auto flex max-w-5xl flex-col items-center justify-center px-4 text-center relative z-10"
+                          >
+                            <AnimationContainer delay={0.1}>
+                              <MagicBadge title="Pricing" />
+                              <h1 className="text-2xl md:text-4xl lg:text-7xl font-semibold font-heading text-center mt-0 !leading-tight">
+                              Unlock Your Potential
+                              </h1>
+                              <p className="text-base md:text-lg mt-3 text-center text-muted-foreground">
+                              Discover the amazing benefits our app offers to both Pro users and Ambassadors.
+                              </p>
+                            </AnimationContainer>
+                          </motion.div>
+                        </section>
+      <MaxWidthWrapper className="mb-40">
         <h2 className="text-3xl font-semibold text-center mb-8">Pro User Benefits</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {proBenefits.map((benefit, index) => (
@@ -110,20 +118,19 @@ const BenefitsPage: React.FC = () => {
         <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center gap-4">
                     <Link
                       href="/get-started"
-                      className="mt-4 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300"
-                    >
+                      className="mt-4 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300">
                       Become a Pro
                     </Link>
-                  </motion.div>
-                  <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center gap-4">
-                    <Link
-                      href="/get-started"
-                      className="mt-4 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300"
-                    >
-                      Ambassador
-                    </Link>
-                  </motion.div>
+        </motion.div>
+        <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center gap-4">
+             <Link
+                href="/get-started"
+                className="mt-4 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300">
+                  Ambassador
+             </Link>
+        </motion.div>
         </div>
+        </MaxWidthWrapper>
     </div>
   );
 };

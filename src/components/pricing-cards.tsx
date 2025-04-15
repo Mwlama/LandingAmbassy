@@ -17,7 +17,7 @@ const PricingCards = () => {
   const [activeTab, setActiveTab] = useState<Tab>("monthly");
 
   return (
-    <Tabs defaultValue="monthly" className="w-full flex flex-col items-center justify-center">
+    <Tabs defaultValue="monthly" className="w-full flex bg-transparent flex-col items-center justify-center">
       <TabsList>
         <MotionTabTrigger
           value="monthly"

@@ -49,12 +49,12 @@ export const NAV_LINKS = [
         menu: [
             {
                 title: "AI Tools",
-                tagline: "Use Our AIs to create, generate and much more.",
+                tagline: "Use Our AIs to generate, create and much more.",
                 href: "/resources/Aitools",
                 icon: NewspaperIcon,
             },
             {
-                title: "Knowledge for Success",
+                title: "Guides",
                 tagline: "Get the best practices in digital, business and AI.",
                 href: "/resources/help",
                 icon: HelpCircleIcon,

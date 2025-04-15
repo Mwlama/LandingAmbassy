@@ -122,7 +122,7 @@ const AboutUsPage = () => {
 
     <div className="overflow-x-hidden scrollbar-hide size-full">
     {/* Hero Section */}
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-transparent">
+    <section className="relative flex items-center justify-center overflow-hidden bg-transparent">
       <Vortex containerClassName="absolute inset-0 z-0" className="w-full h-full" transparent />
   
       <motion.div

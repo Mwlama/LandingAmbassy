@@ -132,11 +132,6 @@ const CryptoComingSoonPage = () => {
           <div className="relative rounded-2xl overflow-hidden flex flex-col lg:flex-row shadow-lg">
             {/* Image on the left */}
             <div className="lg:w-7/12 w-full h-96 lg:h-auto relative">
-              {/* <img 
-                src= {heroPost.imageUrl}
-                alt={heroPost.title} 
-                className="w-full h-full object-cover"
-              /> */}
               <Image 
                   src={heroPost.imageUrl} 
                   alt={heroPost.title} 
@@ -156,11 +151,6 @@ const CryptoComingSoonPage = () => {
               
               {heroPost.author && (
                 <div className="flex items-center mt-6">
-                  {/* <img 
-                    src={heroPost.author.avatarUrl} 
-                    alt={heroPost.author.name} 
-                    className="w-10 h-10 rounded-full"
-                  /> */}
                   <Image 
                   src={heroPost.author.avatarUrl} 
                   alt={heroPost.author.name} 
@@ -189,11 +179,6 @@ const CryptoComingSoonPage = () => {
             {featuredPosts.map((post) => (
               <div key={post.id} className="rounded-xl overflow-hidden shadow-md">
                 <div className="h-48 relative">
-                  {/* <img 
-                    src={post.imageUrl} 
-                    alt={post.title} 
-                    className="w-full h-full object-cover"
-                  /> */}
                   <Image 
                   src={post.imageUrl} 
                   alt={post.title} 
@@ -246,11 +231,6 @@ const CryptoComingSoonPage = () => {
               <div key={article.id} className="group cursor-pointer">
                 <div className="flex flex-col md:flex-row gap-4">
                   <div className="md:w-2/5 h-56 md:h-40 rounded-lg overflow-hidden">
-                    {/* <img 
-                      src={article.imageUrl} 
-                      alt={article.title} 
-                      className="w-full h-full object-cover"
-                    /> */}
                     <Image 
                   src={article.imageUrl} 
                   alt={article.title} 

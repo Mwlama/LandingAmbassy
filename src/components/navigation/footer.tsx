@@ -44,6 +44,11 @@ const Footer = () => {
                                             Integration
                                         </Link>
                                     </li>
+                                    <li className="mt-2">
+                                        <Link href="/payment" className="hover:text-foreground transition-all duration-300">
+                                            Payments
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </AnimationContainer>
@@ -66,6 +71,11 @@ const Footer = () => {
                                     <li className="mt-2">
                                         <Link href="/terms" className="hover:text-foreground transition-all duration-300">
                                             Terms & Conditions
+                                        </Link>
+                                    </li>
+                                    <li className="mt-2">
+                                        <Link href="/legalPage" className="hover:text-foreground transition-all duration-300">
+                                            Creator Terms
                                         </Link>
                                     </li>
                                 </ul>
