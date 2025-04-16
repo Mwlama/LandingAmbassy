@@ -1,13 +1,52 @@
 [
-    {
-      "id": 1,
-      "title": "Why Performance Optimization Matters",
-      "excerpt": "Welcome to our tech blog...",
-      "date": "March 31, 2025",
-      "readTime": "4 MIN READ",
-      "category": "GUIDE",
-      "imageUrl": "/images/blog/performance.jpg"
+  {
+    "id": 1,
+    "title": "Unlock the Creator Economy's Future: Gen Z, Social Commerce, AI",
+    "excerpt": "Welcome to our tech blog! Right now, this is just a placeholder filled with potential topics on web development, CMS...",
+    "date": "March 31, 2025",
+    "readTime": "4 MIN READ",
+    "category": "GUIDE",
+    "imageUrl": "/blog/Article1.jpg",
+    "author": {
+      "name": "Rhoda Brody",
+      "role": "Software Engineer",
+      "avatarUrl": "/api/placeholder/50/50"
     }
-
-  ]
-  
+  },
+  {
+    "id": 2,
+    "title": "Get started with NovaJAM",
+    "excerpt": "Learn how to launch fast and build iteratively with our JAMstack starter.",
+    "date": "March 28, 2025",
+    "readTime": "4 MIN READ",
+    "category": "GUIDE",
+    "imageUrl": "/api/placeholder/400/240"
+  },
+  {
+    "id": 3,
+    "title": "Grid system for better Design User Interface",
+    "excerpt": "Explore how to leverage a proper grid system in your UI design workflow.",
+    "date": "March 28, 2025",
+    "readTime": "7 MIN READ",
+    "category": "NEWS",
+    "imageUrl": "/api/placeholder/400/240"
+  },
+  {
+    "id": 4,
+    "title": "How Headless CMS is Changing the Way We Build Websites",
+    "excerpt": "Why headless architecture is the future for content-driven websites.",
+    "date": "March 30, 2025",
+    "readTime": "4 MIN READ",
+    "category": "NEWS",
+    "imageUrl": "/api/placeholder/400/240"
+  },
+  {
+    "id": 5,
+    "title": "Is Web3 the Future? Understanding Blockchain and DApps",
+    "excerpt": "Breaking down the promise and pitfalls of decentralized technologies.",
+    "date": "March 31, 2025",
+    "readTime": "4 MIN READ",
+    "category": "TECHNOLOGY",
+    "imageUrl": "/api/placeholder/400/240"
+  }
+]

@@ -13,7 +13,6 @@ import dynamic from "next/dynamic";
 import VideoBanner from "@/components/VideoBanner";
 import About from "@/components/about";
 import SearchBar from "@/components/searchBar";
-import GridGlobe from "@/components/ui/GridGlobe";
 import InternalLinksSection from "@/components/ui/aboutUs";
 import TwoWays from "@/components/ui/twoWays";
 

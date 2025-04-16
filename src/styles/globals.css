@@ -126,6 +126,14 @@ html, body {
 .video-banner-scroll:hover {
   animation-play-state: paused;
 }
+/* globals.css */
+canvas#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
 
 /* .black-gradient {
   background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
