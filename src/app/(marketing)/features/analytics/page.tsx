@@ -149,7 +149,7 @@ const VIPPlanPage = () => {
             className="mx-auto flex max-w-5xl flex-col items-center justify-center px-4 text-center relative z-10"
           >
             <AnimationContainer delay={0.1}>
-            <MagicBadge title="PRO Plan" />
+            <MagicBadge title="VIP Plan" />
             <h1 className="text-2xl md:text-4xl lg:text-7xl font-semibold font-heading text-center mt-0 !leading-tight">
             The Ultimate Marketing Suite
             </h1>

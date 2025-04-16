@@ -13,9 +13,9 @@ import { Label } from "./label";
 export const CARDS = [
     {
         Icon: Link2Icon,
-        name: "Get your link and procedure  ",
+        name: " Find and Hire Ambassadors in Seconds on the Marketplace ",
         description: "Start sharing, track the sales and get your Money.",
-        href: "#",
+        href: "/features/password-protection",
         cta: "Learn more",
         className: "col-span-3 lg:col-span-1",
         background: (
@@ -45,7 +45,7 @@ export const CARDS = [
         Icon: SearchIcon,
         name: "Launch a campaign, empower ambassadors, and let your product spread like wildfire!",
         description: "Quickly find, share and discuss with your Army of Ambassadors.",
-        href: "#",
+        href: "/features/password-protection",
         cta: "Learn more",
         className: "col-span-3 lg:col-span-2",
         background: (
@@ -66,7 +66,7 @@ export const CARDS = [
         Icon: WaypointsIcon,
         name: "Manage your Army of Ambassadors",
         description: "Integrate with your favorite apps, niche and location.",
-        href: "#",
+        href: "/features/password-protection",
         cta: "Learn more",
         className: "col-span-3 lg:col-span-2 max-w-full overflow-hidden",
         background: (
@@ -78,7 +78,7 @@ export const CARDS = [
         name: "Schedule campaigns",
         description: "Track your campaigns in your Dashboard.",
         className: "col-span-3 lg:col-span-1",
-        href: "#",
+        href: "/features/password-protection",
         cta: "Learn more",
         background: (
             <Calendar

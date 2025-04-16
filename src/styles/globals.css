@@ -120,7 +120,7 @@ html, body {
 .video-banner-scroll {
   width: 200%;
   display: flex;
-  animation: scroll 60s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 
 .video-banner-scroll:hover {
