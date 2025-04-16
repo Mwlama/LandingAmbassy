@@ -24,8 +24,9 @@ const HomePage = async () => {
     const user = await currentUser();
 
     return (
-        
-        <div className="overflow-x-hidden scrollbar-hide size-full">
+
+        <div className="overflow-x-hidden scrollbar-hide size-full">                    
+
             {/* Hero Section */}
             <MaxWidthWrapper>
                 <div className="flex flex-col justify-center w-full">

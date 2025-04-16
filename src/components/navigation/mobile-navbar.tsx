@@ -48,7 +48,7 @@ const MobileNavbar = () => {
                         </SheetClose>
 
                         {/* Authentication Links */}
-                        <div className="flex items-center justify-evenly w-full space-x-2 mt-4">
+                        <div className="flex items-center justify-evenly w-full space-x-2 mt-8">
                             {isSignedIn ? (
                                 <Link href="/dashboard" className={buttonVariants({ variant: "outline", className: "w-full" })}>
                                     Dashboard

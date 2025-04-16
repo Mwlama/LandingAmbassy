@@ -22,12 +22,21 @@ const HeroSection: React.FC = () => {
     }, 2000);
   };
 
+  const ambassadors = [
+    { id: 1, image: "/ambassador1.jpg", location: "Rabat, Morocco" },
+    { id: 2, image: "/ambassador3.jpg", location: "New York, USA" },
+    { id: 3, image: "/ambassador2.jpg", location: "Berlin, Germany" },
+    { id: 4, image: "/ambassador4.jpg", location: "Tokyo, Japan" },
+    { id: 5, image: "/ambassador5.jpg", location: "Sydney, Australia" },
+    { id: 6, image: "/ambassador6.jpg", location: "Paris, France" },
+  ];
+
   return (
     <section
       className={`relative w-full ${
         showStats
-          ? "h-auto min-h-[50vh] pb-12" // Expand to fit content and add padding at the bottom
-          : "h-[50vh] lg:h-[calc(100vh-4rem)]" // Reduced height on mobile/tablet, full height on desktop
+          ? "h-auto min-h-[50vh] pb-12"
+          : "h-[50vh] lg:h-[calc(100vh-4rem)]"
       }`}
     >
       <div className="container h-full">
@@ -51,7 +60,7 @@ const HeroSection: React.FC = () => {
               </p>
 
               {/* Search Bar */}
-              <div className="relative mb-4 md:mb-0">
+              <div className="relative mt-4 mb-4 md:mb-0">
                 <div className="relative flex items-center bg-black/80 backdrop-blur-sm rounded-full shadow-lg border border-white/10">
                   <div className="flex-1 flex items-center">
                     <Search className="w-5 h-5 text-white/50 ml-4 sm:ml-6" />
@@ -85,84 +94,25 @@ const HeroSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Stats Section for Mobile and Tablet */}
+              {/* Mobile Results - Stacked Vertically */}
               {showStats && (
-                <div className="mt-4 md:mt-2 lg:hidden">
+                <div className="mt-4 md:mt-2 block lg:hidden">
                   <div className="w-full p-4 sm:p-6 space-y-4 sm:space-y-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                      {/* Ambassador Cards */}
-                      <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
-                        <Image
-                          src="/ambassador1.jpg"
-                          alt="Ambassadors"
-                          width={200}
-                          height={200}
-                          className="w-full h-24 sm:h-32 object-cover rounded-lg"
-                        />
-                        <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
-                          Rabat, Morocco
-                        </p>
-                      </div>
-                      <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
-                        <Image
-                          src="/ambassador3.jpg"
-                          alt="Reach Potential"
-                          width={200}
-                          height={200}
-                          className="w-full h-24 sm:h-32 object-cover rounded-lg"
-                        />
-                        <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
-                          New York, USA
-                        </p>
-                      </div>
-                      <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
-                        <Image
-                          src="/ambassador2.jpg"
-                          alt="Brands Promoted"
-                          width={200}
-                          height={200}
-                          className="w-full h-24 sm:h-32 object-cover rounded-lg"
-                        />
-                        <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
-                          Berlin, Germany
-                        </p>
-                      </div>
-                      <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
-                        <Image
-                          src="/ambassador4.jpg"
-                          alt="Ambassadors"
-                          width={200}
-                          height={200}
-                          className="w-full h-24 sm:h-32 object-cover rounded-lg"
-                        />
-                        <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
-                          Tokyo, Japan
-                        </p>
-                      </div>
-                      <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
-                        <Image
-                          src="/ambassador5.jpg"
-                          alt="Reach Potential"
-                          width={200}
-                          height={200}
-                          className="w-full h-24 sm:h-32 object-cover rounded-lg"
-                        />
-                        <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
-                          Sydney, Australia
-                        </p>
-                      </div>
-                      <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
-                        <Image
-                          src="/ambassador6.jpg"
-                          alt="Brands Promoted"
-                          width={200}
-                          height={200}
-                          className="w-full h-24 sm:h-32 object-cover rounded-lg"
-                        />
-                        <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
-                          Paris, France
-                        </p>
-                      </div>
+                    <div className="flex flex-col gap-4"> {/* Changed from grid to flex-col */}
+                      {ambassadors.slice(0, 3).map((ambassador) => (
+                        <div key={ambassador.id} className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
+                          <Image
+                            src={ambassador.image}
+                            alt="Ambassador"
+                            width={200}
+                            height={200}
+                            className="w-full h-32 object-cover rounded-lg"
+                          />
+                          <p className="text-center mt-2 text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
+                            {ambassador.location}
+                          </p>
+                        </div>
+                      ))}
                     </div>
                     <div className="relative mt-2">
                       <div className="absolute inset-0 flex items-center justify-center p-2 pointer-events-none">
@@ -177,95 +127,36 @@ const HeroSection: React.FC = () => {
             </div>
           </AnimationContainer>
 
-          {/* Right Column - Globe Animation and Stats (Desktop) */}
-          <div className="relative h-full w-full">
+          {/* Right Column - Globe Animation and Desktop Results */}
+          <div className="relative h-full w-full hidden lg:block">
             {/* Globe Animation */}
             <div
               className={`absolute inset-0 z-0 w-full h-full transition-all duration-500 ${
                 showStats ? "scale-75" : "scale-100"
-              } hidden lg:block`}
+              }`}
             >
               <MemoizedGridGlobe />
             </div>
 
-            {/* Overlay Search Results on Globe */}
+            {/* Desktop Results - Grid Layout */}
             {showStats && (
               <div className="absolute inset-0 z-10 flex items-center justify-center h-full">
                 <div className="w-full max-w-4xl p-4 sm:p-6 space-y-4 sm:space-y-6 bg-transparent rounded-xl backdrop-blur-sm border border-transparent">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {/* Ambassador Cards */}
-                    <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
-                      <Image
-                        src="/ambassador1.jpg"
-                        alt="Ambassadors"
-                        width={200}
-                        height={200}
-                        className="w-full h-24 sm:h-32 object-cover rounded-lg"
-                      />
-                      <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
-                        Rabat, Morocco
-                      </p>
-                    </div>
-                    <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
-                      <Image
-                        src="/ambassador3.jpg"
-                        alt="Reach Potential"
-                        width={200}
-                        height={200}
-                        className="w-full h-24 sm:h-32 object-cover rounded-lg"
-                      />
-                      <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
-                        New York, USA
-                      </p>
-                    </div>
-                    <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
-                      <Image
-                        src="/ambassador2.jpg"
-                        alt="Brands Promoted"
-                        width={200}
-                        height={200}
-                        className="w-full h-24 sm:h-32 object-cover rounded-lg"
-                      />
-                      <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
-                        Berlin, Germany
-                      </p>
-                    </div>
-                    <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
-                      <Image
-                        src="/ambassador4.jpg"
-                        alt="Ambassadors"
-                        width={200}
-                        height={200}
-                        className="w-full h-24 sm:h-32 object-cover rounded-lg"
-                      />
-                      <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
-                        Tokyo, Japan
-                      </p>
-                    </div>
-                    <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
-                      <Image
-                        src="/ambassador5.jpg"
-                        alt="Reach Potential"
-                        width={200}
-                        height={200}
-                        className="w-full h-24 sm:h-32 object-cover rounded-lg"
-                      />
-                      <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
-                        Sydney, Australia
-                      </p>
-                    </div>
-                    <div className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
-                      <Image
-                        src="/ambassador6.jpg"
-                        alt="Brands Promoted"
-                        width={200}
-                        height={200}
-                        className="w-full h-24 sm:h-32 object-cover rounded-lg"
-                      />
-                      <p className="text-center mt-2 text-base sm:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
-                        Paris, France
-                      </p>
-                    </div>
+                  <div className="grid grid-cols-3 gap-4">
+                    {ambassadors.map((ambassador) => (
+                      <div key={ambassador.id} className="bg-black/80 rounded-xl backdrop-blur-sm border border-white/10 transform transition-transform">
+                        <Image
+                          src={ambassador.image}
+                          alt="Ambassador"
+                          width={200}
+                          height={200}
+                          className="w-full h-32 object-cover rounded-lg"
+                        />
+                        <p className="text-center mt-2 text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
+                          {ambassador.location}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                   <div className="relative mt-4">
                     <div className="absolute inset-0 flex items-center justify-center p-4 pointer-events-none">

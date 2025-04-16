@@ -3,8 +3,24 @@
 import { AnimationContainer } from "@/components";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, BookOpen, Lightbulb, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight, BookOpen, Lightbulb, Link, TrendingUp, Zap } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
+
+const staggerChildren = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
 
 interface ToolCardProps {
   icon: LucideIcon;
@@ -33,7 +49,7 @@ const KnowledgePage = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center py-20 px-4 bg-gradient-to-b from-background to-background/50">
+    <div className="flex flex-col items-center justify-center py-20 px-4 bg-transparent">
       <AnimationContainer delay={0.1} className="w-full max-w-6xl">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mt-6 bg-clip-text text-white dark:text-black">
           Knowledge Hub
@@ -51,15 +67,15 @@ const KnowledgePage = () => {
         </div>
         
         <AnimationContainer delay={0.5} className="mt-16 text-center">
-          <motion.a 
-            href="#" 
-            className="inline-flex items-center px-6 py-3 text-lg font-semibold text-white bg-purple-600 rounded-full hover:bg-purple-700 transition-colors duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Skyrocket
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </motion.a>
+        <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link
+                href="/get-started"
+                className="mt-4 px-8 py-4 bg-fuchsia-500/50 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-neutral-500/30 transition-all duration-300"
+              >
+                Skyrocket
+              </Link>
+            </motion.div>
+          
         </AnimationContainer>
       </AnimationContainer>
     </div>

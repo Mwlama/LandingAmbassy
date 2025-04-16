@@ -1,7 +1,5 @@
 import { Providers } from "@/components";
-import AnimatedBackground from "@/components/ui/animated-background";
 import { Toaster } from "@/components/ui/sonner";
-import CanvasCursor from "@/components/ui/useCanvasCursor";
 import "@/styles/globals.css";
 import { aeonik, cn, generateMetadata, inter } from "@/utils";
 
@@ -21,7 +19,6 @@ export default function RootLayout({
                     inter.variable,
                 )}
             >
-                <CanvasCursor />
                 <Providers>
                     <Toaster richColors theme="dark" position="top-right" />
                     {children}

@@ -31,7 +31,7 @@ const Aitools = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center py-20 px-4 bg-gradient-to-b from-background to-background/50">
+    <div className="flex flex-col items-center justify-center py-20 px-4 bg-transparent">
       <AnimationContainer delay={0.1} className="w-full max-w-6xl">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mt-6 bg-clip-text text-white dark:text-black ">
           AI Tools for the Future
